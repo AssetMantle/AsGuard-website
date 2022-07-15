@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "description": "Landing Site for AsGuard Validator Node",
-  "main": "index.js",
   "repository": "https://github.com/AssetMantle/AsGuard-website",
   "author": "kombos",
   "license": "MIT",
@@ -21,10 +20,13 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
+    "markdown-to-jsx": "^7.1.7",
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-final-form": "^6.5.9",
+    "webpack-bundle-analyzer": "^4.5.0"
   },
   "devDependencies": {
     "eslint": "latest",
