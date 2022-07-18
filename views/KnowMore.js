@@ -49,7 +49,7 @@ export default function KnowMore() {
     // },
     {
       image: "twitter",
-      link: "https://twitter.com/AssetMantle",
+      link: "https://twitter.com/AsGuardNetwork",
     },
     {
       image: "assetmantle",
