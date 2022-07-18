@@ -1,8 +1,8 @@
-import * as React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import createEmotionServer from '@emotion/server/create-instance';
-import theme from '../src/theme';
-import createEmotionCache from '../src/createEmotionCache';
+import * as React from "react";
+import Document, { Html, Head, Main, NextScript } from "next/document";
+import createEmotionServer from "@emotion/server/create-instance";
+import theme from "../src/theme";
+import createEmotionCache from "../src/createEmotionCache";
 
 export default class MyDocument extends Document {
   render() {
@@ -11,15 +11,25 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="shortcut icon" href="/static/favicon.ico" />
+          <link rel="shortcut icon" href="/favicon.ico" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin=""
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Lato&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+          />
           <meta name="emotion-insertion-point" content="" />
           {this.props.emotionStyleTags}
         </Head>
-        <body>
+        <body style={{ background: theme.palette.primary.main }}>
           <Main />
           <NextScript />
         </body>
@@ -74,7 +84,7 @@ MyDocument.getInitialProps = async (ctx) => {
   const emotionStyles = extractCriticalToChunks(initialProps.html);
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
-      data-emotion={`${style.key} ${style.ids.join(' ')}`}
+      data-emotion={`${style.key} ${style.ids.join(" ")}`}
       key={style.key}
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: style.css }}
