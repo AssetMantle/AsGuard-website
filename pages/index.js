@@ -1,24 +1,28 @@
 import * as React from "react";
 import AppAppBar from "../views/AppAppBar";
-import AppFooter from "../views/AppFooter";
-import ProductCategories from "../views/ProductCategories";
-import ProductCTA from "../views/ProductCTA";
-import ProductHero from "../views/ProductHero";
-import ProductHowItWorks from "../views/ProductHowItWorks";
-import ProductSmokingHero from "../views/ProductSmokingHero";
-import ProductValues from "../views/ProductValues";
+import Footer from "../views/Footer";
+import Hero from "../views/Hero";
+import HowItWorks from "../views/HowItWorks";
+import KnowMore from "../views/KnowMore";
 
 export default function Index() {
+  const [ContactUsModal, setContactUsModal] = React.useState(false);
+
   return (
     <React.Fragment>
-      <AppAppBar />
-      <ProductHero />
+      <AppAppBar setContactUsModal={setContactUsModal} />
+      <Hero />
+      <HowItWorks />
+      <KnowMore />
+      <Footer />
+      {/* 
       <ProductValues />
       <ProductCategories />
       <ProductHowItWorks />
       <ProductCTA />
       <ProductSmokingHero />
       <AppFooter />
+    */}
     </React.Fragment>
   );
 }
