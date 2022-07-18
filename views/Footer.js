@@ -1,7 +1,6 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import { Box, Link, Typography } from "@mui/material";
-import Image from "next/image";
+import { Typography } from "@mui/material";
 
 const FooterLayoutRoot = styled("footer")(({ theme }) => ({
   color: theme.palette.themeWhite,

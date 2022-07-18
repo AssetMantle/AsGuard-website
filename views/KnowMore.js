@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
 import { Box, Link, Typography } from "@mui/material";
-import Image from "next/image";
+// import Image from "next/image";
 
 const KnowMoreLayoutRoot = styled("section")(({ theme }) => ({
   color: theme.palette.themeWhite,
@@ -75,8 +75,8 @@ export default function KnowMore() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              layout="fill"
+            <img
+              style={{ width: "100%", height: "auto" }}
               src={`/static/images/${data.image}.png`}
               alt={data.image + " logo"}
             />
