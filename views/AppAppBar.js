@@ -4,7 +4,7 @@ import Link from "@mui/material/Link";
 import AppBar from "../components/AppBar";
 import Toolbar from "../components/Toolbar";
 import { Button } from "@mui/material";
-import Image from "next/image";
+// import Image from "next/image";
 
 const rightLink = {
   fontSize: 14,
@@ -27,12 +27,7 @@ function AppAppBar({ setContactUsModal }) {
           }}
         >
           <Link underline="none" href="/">
-            <Image
-              width={138.07}
-              height={33}
-              src="/static/images/logo.svg"
-              alt="AsGuard"
-            />
+            <img src="/static/images/logo.svg" alt="AsGuard" />
           </Link>
           <Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
             <Button
