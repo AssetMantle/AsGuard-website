@@ -17,8 +17,12 @@ const CarouselContainer = styled(Box)`
   background-repeat: repeat-y;
   background-position: bottom;
   background-size: 100%;
-  padding-bottom: calc(33px + 2vmin);
+  padding-bottom: calc(24px + 2vmin);
+  .mui-style-bbreus-MuiButtonBase-root-MuiIconButton-root {
+    margin: 9px 15px;
+  }
   .mui-style-8ucetn-MuiButtonBase-root-MuiIconButton-root {
+    margin: 9px 15px;
     svg {
       fill: #ffc640;
     }
@@ -30,7 +34,7 @@ const CarouselContainer = styled(Box)`
 `;
 
 const CarouselItem = styled(Paper)`
-  padding: calc(65px + 2vmin) calc(20px + 2vmin) calc(60px + 2vmin);
+  padding: calc(65px + 2vmin) calc(20px + 2vmin) calc(51px + 2vmin);
   background-color: transparent;
   box-shadow: none;
   text-align: center;
