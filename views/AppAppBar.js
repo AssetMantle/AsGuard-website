@@ -1,52 +1,51 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import AppBar from '../components/AppBar';
-import Toolbar from '../components/Toolbar';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
+import AppBar from "../components/AppBar";
+import Toolbar from "../components/Toolbar";
+import { Button } from "@mui/material";
+import Image from "next/image";
 
 const rightLink = {
-  fontSize: 16,
-  color: 'common.white',
+  fontSize: 14,
+  color: "#FFFDFA",
   ml: 3,
+  textTransform: "capitalize",
+  fontWeight: 500,
+  lineHeight: "120%",
 };
 
-function AppAppBar() {
+function AppAppBar({ setContactUsModal }) {
   return (
     <div>
       <AppBar position="fixed">
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <Box sx={{ flex: 1 }} />
-          <Link
-            variant="h6"
-            underline="none"
-            color="inherit"
-            href="/"
-            sx={{ fontSize: 24 }}
-          >
-            {'onepirate'}
+        <Toolbar
+          sx={{
+            justifyContent: "space-between",
+            width: "min(100%, 1225px)",
+            margin: "auto",
+          }}
+        >
+          <Link underline="none" href="/">
+            <Image
+              width={138.07}
+              height={33}
+              src="/static/images/logo.svg"
+              alt="AsGuard"
+            />
           </Link>
-          <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
-            <Link
-              color="inherit"
+          <Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
+            <Button
               variant="h6"
-              underline="none"
-              href="/"
               sx={rightLink}
+              onClick={() => setContactUsModal(true)}
+              disabled={true}
             >
-              {'Sign In'}
-            </Link>
-            <Link
-              variant="h6"
-              underline="none"
-              href="/"
-              sx={{ ...rightLink, color: 'secondary.main' }}
-            >
-              {'Sign Up'}
-            </Link>
+              {"Contact Us"}
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
-      <Toolbar />
     </div>
   );
 }
