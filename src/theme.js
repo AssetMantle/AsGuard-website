@@ -6,6 +6,7 @@ const rawTheme = createTheme({
     themeWhite: "#fffdfa",
     dark2: "#21211e",
     dark3: "#c2c2c2",
+    themeYellow: "#ffc640",
     primary: {
       light: "#69696a",
       main: "#111111",
@@ -77,7 +78,7 @@ const theme = {
     h3: {
       ...rawTheme.typography.h3,
       ...fontHeader,
-      fontSize: 42,
+      fontSize: 32,
       lineHeight: "120%",
     },
     h4: {
