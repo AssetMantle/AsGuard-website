@@ -1,21 +1,24 @@
-import { createTheme } from '@mui/material/styles';
-import { green, grey, red } from '@mui/material/colors';
+import { createTheme } from "@mui/material/styles";
+import { green, grey, red } from "@mui/material/colors";
 
 const rawTheme = createTheme({
   palette: {
+    themeWhite: "#fffdfa",
+    dark2: "#21211e",
+    dark3: "#c2c2c2",
     primary: {
-      light: '#69696a',
-      main: '#28282a',
-      dark: '#1e1e1f',
+      light: "#69696a",
+      main: "#111111",
+      dark: "#1e1e1f",
     },
     secondary: {
-      light: '#fff5f8',
-      main: '#ff3366',
-      dark: '#e62958',
+      light: "#fff5f8",
+      main: "#ff3366",
+      dark: "#e62958",
     },
     warning: {
-      main: '#ffc071',
-      dark: '#ffb25e',
+      main: "#ffc071",
+      dark: "#ffb25e",
     },
     error: {
       light: red[50],
@@ -40,8 +43,8 @@ const rawTheme = createTheme({
 const fontHeader = {
   color: rawTheme.palette.text.primary,
   fontWeight: rawTheme.typography.fontWeightMedium,
-  fontFamily: "'Roboto Condensed', sans-serif",
-  textTransform: 'uppercase',
+  fontFamily: "'Work Sans', sans-serif",
+  textTransform: "capitalize",
 };
 
 const theme = {
@@ -61,45 +64,60 @@ const theme = {
       ...rawTheme.typography.h1,
       ...fontHeader,
       letterSpacing: 0,
-      fontSize: 60,
+      fontSize: 48,
+      lineHeight: "120%",
     },
     h2: {
       ...rawTheme.typography.h2,
       ...fontHeader,
-      fontSize: 48,
+      fontSize: 42,
+      fontWeight: 600,
+      lineHeight: "120%",
     },
     h3: {
       ...rawTheme.typography.h3,
       ...fontHeader,
       fontSize: 42,
+      lineHeight: "120%",
     },
     h4: {
       ...rawTheme.typography.h4,
       ...fontHeader,
-      fontSize: 36,
+      fontSize: 24,
+      lineHeight: "120%",
     },
     h5: {
       ...rawTheme.typography.h5,
       fontSize: 20,
+      lineHeight: "120%",
       fontWeight: rawTheme.typography.fontWeightLight,
     },
     h6: {
       ...rawTheme.typography.h6,
       ...fontHeader,
       fontSize: 18,
+      lineHeight: "120%",
     },
     subtitle1: {
       ...rawTheme.typography.subtitle1,
       fontSize: 18,
+      lineHeight: "120%",
     },
     body1: {
       ...rawTheme.typography.body2,
       fontWeight: rawTheme.typography.fontWeightRegular,
-      fontSize: 16,
+      fontSize: 20,
+      lineHeight: "120%",
     },
     body2: {
       ...rawTheme.typography.body1,
-      fontSize: 14,
+      fontSize: 18,
+      lineHeight: "120%",
+    },
+    body3: {
+      ...rawTheme.typography.body1,
+      fontSize: 13,
+      lineHeight: "120%",
     },
   },
 };
