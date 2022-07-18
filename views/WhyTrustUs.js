@@ -14,7 +14,7 @@ const WhyTrustUsLayoutRoot = styled("section")(({ theme }) => ({
 const CarouselContainer = styled(Box)`
   margin-top: 32px;
   background-image: url("/static/images/testimonial-bg.svg");
-  background-repeat: repeat no-repeat;
+  background-repeat: repeat-y;
   background-position: bottom;
   background-size: 100%;
   padding-bottom: calc(33px + 2vmin);
