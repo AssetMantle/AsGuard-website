@@ -1,24 +1,22 @@
 import * as React from "react";
-import AppAppBar from "../views/AppAppBar";
-import AppFooter from "../views/AppFooter";
+import HeroSection from "../views/HeroSection";
+import HowItWorks from "../views/HowItWorks";
 import ProductCategories from "../views/ProductCategories";
 import ProductCTA from "../views/ProductCTA";
-import ProductHero from "../views/ProductHero";
+// import ProductHero from "../views/ProductHero";
 import ProductHowItWorks from "../views/ProductHowItWorks";
 import ProductSmokingHero from "../views/ProductSmokingHero";
 import ProductValues from "../views/ProductValues";
+import WhyTrustUs from "../views/WhyTrustUs";
 
 export default function Index() {
   return (
-    <React.Fragment>
-      <AppAppBar />
-      <ProductHero />
+    <>
+      {/* <ProductHero /> */}
+      <HeroSection />
+      <HowItWorks />
+      <WhyTrustUs />
       <ProductValues />
-      <ProductCategories />
-      <ProductHowItWorks />
-      <ProductCTA />
-      <ProductSmokingHero />
-      <AppFooter />
-    </React.Fragment>
+    </>
   );
 }

@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
@@ -26,6 +26,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-final-form": "^6.5.9",
+    "react-material-ui-carousel": "^3.4.2",
     "webpack-bundle-analyzer": "^4.5.0"
   },
   "devDependencies": {
