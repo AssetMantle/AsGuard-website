@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
 import { Box, Link, Typography } from "@mui/material";
-import Image from "next/image";
+// import Image from "next/image";
 
 const HeroLayoutRoot = styled("section")(({ theme }) => ({
   color: theme.palette.themeWhite,
@@ -84,8 +84,7 @@ export default function Hero() {
   return (
     <HeroLayoutRoot>
       <HeroLeft>
-        <Image
-          layout="fill"
+        <img
           style={{
             width: "100%",
             height: "auto",
