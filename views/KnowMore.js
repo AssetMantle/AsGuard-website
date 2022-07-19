@@ -36,7 +36,8 @@ const LinkContainer = styled(Box)`
       },
     })}
     &:hover {
-      filter: drop-shadow(0px 0px 25px #ffd365);
+      border-radius: 50%;
+      box-shadow: 0px 0px 15px #ffd365;
     }
   }
 `;
