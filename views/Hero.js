@@ -42,9 +42,20 @@ const ThemeButton = styled(Link)`
   cursor: pointer;
   color: ${({ theme }) => ({ color: theme.palette.dark3 })};
 
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 5px 3px rgba(255, 201, 66, 0.4);
+  }
+
   &.disabled {
-    opacity: 0.7;
+    color: ${({ theme }) => ({ color: theme.palette.yellowDisabled })};
+    border: 2px solid
+      ${({ theme }) => ({ color: theme.palette.yellowDisabled })} !important;
     cursor: not-allowed;
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
   }
 
   ${({ theme }) => ({
@@ -107,7 +118,14 @@ export default function Hero() {
           to grow your cryptocurrency holdings securely. Boost your earnings by
           taking advantage of decentralized proof-of-stake consensus networks.
         </Typography>
-        <ThemeButton disabled={true} className="disabled">
+        <ThemeButton
+          onClick={() =>
+            window.open(
+              "https://wallet.assetmantle.one/dashboard/staking",
+              "_blank"
+            )
+          }
+        >
           Stake Now!
         </ThemeButton>
       </HeroRight>
