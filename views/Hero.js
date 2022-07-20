@@ -47,10 +47,13 @@ const ThemeButton = styled(Link)`
     box-shadow: 0px 0px 5px 3px rgba(255, 201, 66, 0.4);
   }
 
-  &.disabled {
-    color: ${({ theme }) => ({ color: theme.palette.yellowDisabled })};
-    border: 2px solid
-      ${({ theme }) => ({ color: theme.palette.yellowDisabled })} !important;
+  &:disabled {
+    ${({ theme }) => ({
+      background: theme.palette.yellowDisabled,
+    })}
+    border: 2px solid;
+    ${({ theme }) => ({ borderColor: theme.palette.yellowDisabled })}
+    box-shadow: none;
     cursor: not-allowed;
     &:hover,
     &:focus {
@@ -119,6 +122,7 @@ export default function Hero() {
           taking advantage of decentralized proof-of-stake consensus networks.
         </Typography>
         <ThemeButton
+          component="button"
           onClick={() =>
             window.open(
               "https://wallet.assetmantle.one/dashboard/staking",
