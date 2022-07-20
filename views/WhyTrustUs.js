@@ -1,6 +1,6 @@
-import React from "react";
+import { Box, Paper, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { Box, Paper, Button, Typography } from "@mui/material";
+import React from "react";
 import Carousel from "react-material-ui-carousel";
 
 const WhyTrustUsLayoutRoot = styled("section")(({ theme }) => ({
@@ -71,13 +71,23 @@ export default function WhyTrustUs() {
     },
   ];
 
-  const [Showing, setShowing] = React.useState(0);
+  /* const [Showing, setShowing] = React.useState(0);
 
   setInterval(function () {
     Showing === WhyTrustUsContents.length - 1
       ? setShowing(0)
       : setShowing(Showing + 1);
-  }, 5000);
+  }, 5000); */
+
+  const carouselStates = {
+    autoPlay: true,
+    animation: "slide",
+    indicators: true,
+    timeout: 500,
+    navButtonsAlwaysVisible: true,
+    navButtonsAlwaysInvisible: false,
+    cycleNavigation: true,
+  };
 
   return (
     <WhyTrustUsLayoutRoot>
@@ -85,7 +95,30 @@ export default function WhyTrustUs() {
         Why Trust Us
       </Typography>
       <CarouselContainer>
-        <Carousel>
+        <Carousel
+          autoPlay={carouselStates.autoPlay}
+          animation={carouselStates.animation}
+          indicators={carouselStates.indicators}
+          timeout={carouselStates.timeout}
+          cycleNavigation={carouselStates.cycleNavigation}
+          navButtonsAlwaysVisible={carouselStates.navButtonsAlwaysVisible}
+          navButtonsAlwaysInvisible={carouselStates.navButtonsAlwaysInvisible}
+          next={(now, previous) =>
+            console.log(
+              `Next User Callback: Now displaying child${now}. Previously displayed child${previous}`
+            )
+          }
+          prev={(now, previous) =>
+            console.log(
+              `Prev User Callback: Now displaying child${now}. Previously displayed child${previous}`
+            )
+          }
+          onChange={(now, previous) =>
+            console.log(
+              `OnChange User Callback: Now displaying child${now}. Previously displayed child${previous}`
+            )
+          }
+        >
           {WhyTrustUsContents.map((item, i) => (
             <Item key={i} item={item} />
           ))}
