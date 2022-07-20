@@ -7,6 +7,7 @@ const rawTheme = createTheme({
     dark2: "#21211e",
     dark3: "#c2c2c2",
     themeYellow: "#ffc640",
+    yellowDisabled: "#624d19",
     primary: {
       light: "#69696a",
       main: "#111111",
