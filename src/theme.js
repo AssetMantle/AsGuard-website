@@ -102,7 +102,7 @@ const theme = {
     },
     subtitle1: {
       ...rawTheme.typography.subtitle1,
-      fontSize: 18,
+      fontSize: 24,
       lineHeight: "120%",
     },
     body1: {

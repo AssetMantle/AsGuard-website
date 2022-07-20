@@ -18,10 +18,12 @@ const CarouselContainer = styled(Box)`
   background-position: bottom;
   background-size: 100%;
   padding-bottom: calc(24px + 2vmin);
-  .mui-style-bbreus-MuiButtonBase-root-MuiIconButton-root {
+  .mui-style-bbreus-MuiButtonBase-root-MuiIconButton-root,
+  .mui-style-mq3aek {
     margin: 9px 15px;
   }
-  .mui-style-8ucetn-MuiButtonBase-root-MuiIconButton-root {
+  .mui-style-8ucetn-MuiButtonBase-root-MuiIconButton-root,
+  .mui-style-10twnsm {
     margin: 9px 15px;
     svg {
       fill: #ffc640;
@@ -55,7 +57,7 @@ export default function WhyTrustUs() {
       title: "Never-failing service",
       details:
         "To ensure uninterrupted service, our systems use highly available, distributed and redundant nodes across multiple data centres in various geographical regions.",
-      width: "1016px",
+      width: "852px",
     },
     {
       title: "Cutting-edge security",
@@ -136,7 +138,7 @@ function Item(props) {
       </Typography>
       <Typography
         color="inherit"
-        variant="body1"
+        variant="subtitle1"
         className="carouselBody"
         sx={{ paddingTop: "32px" }}
       >
@@ -145,3 +147,7 @@ function Item(props) {
     </CarouselItem>
   );
 }
+
+// MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium  mui-style-mq3aek
+// MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium  mui-style-mq3aek
+// MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium   mui-style-10twnsm
