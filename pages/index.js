@@ -14,7 +14,7 @@ export default function Index() {
       <AppAppBar setContactUsModal={setContactUsModal} />
       <Hero />
       <HowItWorks />
-      {/* <WhyTrustUs /> */}
+      <WhyTrustUs />
       <KnowMore />
       <Footer />
       {/* 
