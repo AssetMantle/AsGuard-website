@@ -1,6 +1,6 @@
-import React from "react";
+import { Box, Paper, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { Box, Paper, Button, Typography } from "@mui/material";
+import React from "react";
 import Carousel from "react-material-ui-carousel";
 
 const WhyTrustUsLayoutRoot = styled("section")(({ theme }) => ({

@@ -4,7 +4,7 @@ import Footer from "../views/Footer";
 import Hero from "../views/Hero";
 import HowItWorks from "../views/HowItWorks";
 import KnowMore from "../views/KnowMore";
-import WhyTrustUs from "../views/WhyTrustUs";
+import WhyTrustUsTwo from "../views/WhyTrustUsTwo";
 
 export default function Index() {
   const [ContactUsModal, setContactUsModal] = React.useState(false);
@@ -15,6 +15,7 @@ export default function Index() {
       <Hero />
       <HowItWorks />
       {/* <WhyTrustUs /> */}
+      <WhyTrustUsTwo />
       <KnowMore />
       <Footer />
       {/* 
