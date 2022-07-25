@@ -38,9 +38,3 @@ Next.js has [a custom Link component](https://nextjs.org/docs/api-reference/next
 The example folder provides adapters for usage with MUI.
 More information [in the documentation](https://mui.com/material-ui/guides/routing/#next-js).
 
-## What's next?
-
-<!-- #default-branch-switch -->
-
-You now have a working example project.
-You can head back to the documentation, continuing browsing it from the [templates](https://mui.com/material-ui/getting-started/templates/) section.
