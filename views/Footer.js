@@ -23,7 +23,7 @@ export default function Footer() {
   return (
     <FooterLayoutRoot>
       <Typography color="inherit" variant="body3" align="center">
-        &copy; AsGuard {new Date().getFullYear()} - All rights reserved
+        &copy; AsGuard {new Date().getFullYear()} - All Rights Reserved
       </Typography>
     </FooterLayoutRoot>
   );
