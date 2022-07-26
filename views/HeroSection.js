@@ -10,9 +10,9 @@ const sectionStyles = (theme) => ({
   display: "flex",
   overflow: "hidden",
   bgcolor: theme.palette.secondary.light,
-  bgcolor: "pink",
+  // bgcolor: "pink",
   position: "relative",
-  minHeight: "100vh",
+  // minHeight: "1200px"
   // backgroundImage: `url(${HeroArtwork})`,
 });
 
