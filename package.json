@@ -1,38 +1,41 @@
 {
-  "name": "asguard-website",
-  "version": "1.0.0",
   "private": true,
-  "description": "Landing Site for AsGuard Validator Node",
-  "repository": "https://github.com/AssetMantle/AsGuard-website",
-  "author": "kombos",
-  "license": "MIT",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "lint": "next lint",
-    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest",
-    "deploy": "next build && next export && git add out/ && git commit -m \"Deploy gh-pages\"",
-    "gh-pages": "git subtree push --prefix out origin gh-pages"
-  },
   "dependencies": {
     "@emotion/cache": "latest",
-    "@emotion/react": "latest",
+    "@emotion/react": "^11.10.5",
     "@emotion/server": "latest",
-    "@emotion/styled": "latest",
-    "@mui/icons-material": "latest",
-    "@mui/material": "latest",
-    "markdown-to-jsx": "^7.1.7",
+    "@emotion/styled": "^11.10.5",
+    "@popperjs/core": "^2.11.6",
+    "@splidejs/react-splide": "^0.7.8",
+    "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.9.1",
+    "jquery": "^3.6.1",
     "next": "latest",
+    "popper.js": "^1.16.1",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-final-form": "^6.5.9",
-    "react-material-ui-carousel": "^3.4.2",
-    "webpack-bundle-analyzer": "^4.5.0"
+    "react-icons": "^4.4.0",
+    "sass": "^1.55.0",
+    "serve": "11.2.0",
+    "swiper": "^8.1.4"
   },
   "devDependencies": {
     "eslint": "latest",
     "eslint-config-next": "latest"
-  }
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "preexport": "npm run build",
+    "export": "next export",
+    "prestart": "npm run export",
+    "start": "serve out"
+  },
+  "name": "assetmantle-website",
+  "version": "1.0.0",
+  "description": "Landing Website for AssetMantle.one",
+  "repository": "https://github.com/AssetMantle/assetMantle-website.git",
+  "author": "kombos <kamlesh@assetmantle.one>",
+  "license": "MIT"
 }

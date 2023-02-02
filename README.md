@@ -1,40 +1,17 @@
-# Next.js example
+# Documentation for Next.js Bootstrap sections and components
+
+In order to speedup the development process of landing pages we are making a collection of the components may require for landing pages or static pages. In repo we will store our code and document it for future use and will update it as requires.
 
 ## How to use
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
+1. Clone the repository to the local device.
+2. Run
 
-<!-- #default-branch-switch -->
-
-```sh
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/nextjs
-cd nextjs
+```(shell)
+git remote add origin https://github.com/USER/REPO>.git
+git push origin main
 ```
 
-Install it and run:
-
-```sh
-npm install
-npm run dev
-```
-
-or:
-
-<!-- #default-branch-switch -->
-
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/nextjs)
-
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui/material-ui/tree/master/examples/nextjs)
-
-## The idea behind the example
-
-The project uses [Next.js](https://github.com/vercel/next.js), which is a framework for server-rendered React apps.
-It includes `@mui/material` and its peer dependencies, including `emotion`, the default style engine in MUI v5.
-If you prefer, you can [use styled-components instead](https://mui.com/material-ui/guides/interoperability/#styled-components).
-
-## The link component
-
-Next.js has [a custom Link component](https://nextjs.org/docs/api-reference/next/link).
-The example folder provides adapters for usage with MUI.
-More information [in the documentation](https://mui.com/material-ui/guides/routing/#next-js).
-
+3. Run `npm install`, and `npm run dev` in your local machine.
+4. See the file `./pages/index.js` to check all the pre build code/section.
+5. Change the static props data as needed and delete all the un necessary files from `./views/...`.
