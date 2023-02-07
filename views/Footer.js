@@ -172,115 +172,29 @@ export default function Footer(props) {
   }, []);
   return (
     <>
-      <footer
-        sx={{ py: 8 }}
-        className="py-6 bg-translucent text-white rounded-4"
-      >
+      <footer sx={{ py: 8 }} className="py-3 bg-translucent text-white">
         <div className="container-lg d-flex flex-column gap-2">
-          {FooterConfigData.showTopData === true && (
-            <div className="row gap-4 bg-t">
-              <div className="col-12 col-sm-6 col-md-3">
-                {FooterConfigData.colOne.list &&
-                  Array.isArray(FooterConfigData.colOne.list) &&
-                  FooterConfigData.colOne.list.length > 0 && (
-                    <div className="d-flex flex-column pt-3 gap-3 text-center text-md-start">
-                      {React.Children.toArray(
-                        FooterConfigData.colOne.list.map((item, index) => (
-                          <div className="d-flex flex-column gap-1 bg-t align-items-center align-items-md-start">
-                            <p className="caption">{item.title}</p>
-                            <NextLink
-                              color="primary.main"
-                              underline="hover"
-                              variant="caption"
-                              href={`mailto:${item.text}`}
-                            >
-                              {item.text}
-                            </NextLink>
-                          </div>
-                        ))
-                      )}
-                      <SocialIcons
-                        additionalClass="justify-content-center justify-content-md-start body1"
-                        spacing={3}
-                        size="small"
-                      />
-                    </div>
-                  )}
-              </div>
-              <div
-                className="col-12 col-sm-6 col-md-3"
-                style={{ textAlign: "center" }}
-              >
-                {FooterConfigData.colTwo.list &&
-                  Array.isArray(FooterConfigData.colTwo.list) &&
-                  FooterConfigData.colTwo.list.length > 0 && (
-                    <div className="d-flex flex-column pt-3 gap-3">
-                      {React.Children.toArray(
-                        FooterConfigData.colTwo.list.map((item, index) => (
-                          <NextLink
-                            className="text-primary caption hover-underline"
-                            href={item.link.href}
-                            key={`${index}sa${item}`}
-                          >
-                            {item.link.text}
-                          </NextLink>
-                        ))
-                      )}
-                    </div>
-                  )}
-              </div>
-              <div
-                className="col-12 col-sm-6 col-md-3"
-                style={{ textAlign: "center" }}
-              >
-                {FooterConfigData.colThree.list &&
-                  Array.isArray(FooterConfigData.colThree.list) &&
-                  FooterConfigData.colThree.list.length > 0 && (
-                    <div className="d-flex flex-column pt-3 gap-3">
-                      {React.Children.toArray(
-                        FooterConfigData.colThree.list.map((item, index) => (
-                          <NextLink
-                            className="text-primary caption hover-underline"
-                            href={item.link.href}
-                            key={`${index}sa${item}`}
-                          >
-                            {item.link.text}
-                          </NextLink>
-                        ))
-                      )}
-                    </div>
-                  )}
-              </div>
-              <div
-                className="col-12 col-sm-6 col-md-2"
-                style={{ textAlign: "center" }}
-              >
-                {FooterConfigData.colFour.list &&
-                  Array.isArray(FooterConfigData.colFour.list) &&
-                  FooterConfigData.colFour.list.length > 0 && (
-                    <div className="d-flex flex-column pt-3 gap-3">
-                      {React.Children.toArray(
-                        FooterConfigData.colFour.list.map((item, index) => (
-                          <NextLink
-                            className="text-primary caption hover-underline"
-                            href={item.link.href}
-                            key={`${index}sa${item}`}
-                          >
-                            {item.link.text}
-                          </NextLink>
-                        ))
-                      )}
-                    </div>
-                  )}
+          <div className="d-flex align-items-center pt-3 pb-3 gap-2 flex-column flex-sm-row justify-content-between align-items-center">
+            <div className="d-flex align-items-center gap-4">
+              <img
+                src="/static/asGuardLogo.svg"
+                style={{ maxWidth: "200px" }}
+              ></img>
+              <p className="caption text-center mb-0 text-gray">
+                © AsGuard {new Date().getFullYear()} - All rights reserved{" "}
+              </p>
+            </div>
+            <div className="d-flex align-items-center gap-4">
+              <SocialIcons
+                additionalClass="justify-content-center justify-content-md-start body1"
+                spacing={3}
+                size="small"
+              />
+              <div className="caption text-center d-flex align-items-center gap-2">
+                <p className="mb-0 text-gray">Powered by </p>
+                <img src="/static/Logo.svg" style={{ maxWidth: "140px" }}></img>
               </div>
             </div>
-          )}
-          <hr className="bg-gray-800" style={{ height: "1px" }} />
-          <div className="d-flex align-items-center pt-3 pb-5 gap-2 flex-column flex-sm-row justify-content-between align-items-center">
-            <img src="/static/Logo.svg" style={{ maxWidth: "200px" }}></img>
-            <p className="caption text-center">
-              © AssetMantle {new Date().getFullYear()} - All rights reserved{" "}
-            </p>
           </div>
         </div>
       </footer>
