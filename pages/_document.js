@@ -22,10 +22,11 @@ export default class MyDocument extends Document {
         </Head>
         <body
           style={{
-            backgroundImage: "url('/images/Background_tile.webp')",
-            backgroundRepeat: "repeat-y",
+            // backgroundImage: "url('/images/Background_tile.webp')",
+            // backgroundRepeat: "repeat-y",
             // backgroundPosition: "center top",
-            backgroundSize: "100%",
+            // backgroundSize: "100%",
+            backgroundColor: "#0f0f10",
           }}
         >
           <Main />

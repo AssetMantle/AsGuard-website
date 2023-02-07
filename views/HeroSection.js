@@ -1,5 +1,4 @@
 import React from "react";
-import SocialIcons from "../components/SocialIcons";
 
 export default function HeroSection({ heroSectionConfigData }) {
   return (
@@ -10,57 +9,64 @@ export default function HeroSection({ heroSectionConfigData }) {
         heroSectionConfigData.title.toLowerCase().replaceAll(" ", "-")
       }
     >
-      <div className="container-lg">
-        <div className="row align-items-center">
-          {/* Left Sub-section */}
-          <div className="col-12 col-md-6 py-10" py={10}>
-            <div className="d-flex flex-column align-items-center align-items-md-start gap-2">
-              <h1
-                className="text-center text-md-start h1"
-                style={{ maxWidth: "399px" }}
+      <div>
+        <div
+          className="d-flex align-items-center"
+          style={{
+            width: "100%",
+            height: "100vh",
+          }}
+        >
+          <div
+            className="bg-image text-center d-flex flex-column justify-content-center align-items-center"
+            style={{
+              background: `url(${heroSectionConfigData.image}) no-repeat`,
+              backgroundSize: "contain",
+              width: "100%",
+              height: "100%",
+              backgroundPositionY: "center",
+            }}
+          >
+            <div
+              className="d-flex justify-content-center gap-2 text-uppercase"
+              style={{ letterSpacing: "0.8em" }}
+            >
+              <h3 className="mb-3 h3">{heroSectionConfigData.title1}</h3>
+              <h3
+                className="mb-3 h3"
+                style={heroSectionConfigData.title2Styles}
               >
-                {heroSectionConfigData.title}
-              </h1>
-
-              <h6
-                className="text-center text-md-start subtitle1 text-primary "
-                style={{ maxWidth: "399px" }}
-              >
-                {heroSectionConfigData.subtitle}
-              </h6>
-
-              <div className="d-flex flex-wrap justify-content-center justify-content-md-start gap-2 pt-2 pb-4">
-                {React.Children.toArray(
-                  heroSectionConfigData.buttons.map((button) => (
-                    <a
-                      className={`btn d-flex align-items-center gap-2 ${button.variant}`}
-                      href={button.href}
-                      target="_blank"
-                    >
-                      {button.label} <i className={`bi ${button.endIcon}`}></i>
-                    </a>
-                  ))
-                )}
-              </div>
-              <hr
-                className="bg-theme-white rounded-4"
-                style={{ height: "2px", width: "90%", opacity: "1" }}
-              />
-              <SocialIcons />
+                {heroSectionConfigData.title2}
+              </h3>
             </div>
-          </div>
 
-          {/* Right Sub-section */}
-          <div className="col-12 col-md-6">
-            <img
-              src={heroSectionConfigData.image}
-              alt="hero_image"
-              style={{
-                width: "95%",
-                height: "auto",
-              }}
-            />
+            <a
+              className={`btn d-flex align-items-center gap-2 px-5 py-2 mt-4 ${heroSectionConfigData.button.variant}`}
+              href={heroSectionConfigData.button.href}
+              target="_blank"
+            >
+              {heroSectionConfigData.button.label}{" "}
+              <i className={`bi ${heroSectionConfigData.button.endIcon}`}></i>
+            </a>
           </div>
+          <img
+            src={heroSectionConfigData.floatingBoxImage1}
+            style={{
+              maxWidth: "200px",
+              position: "absolute",
+              left: "200px",
+              top: "450px",
+            }}
+          />
+          <img
+            src={heroSectionConfigData.floatingBoxImage2}
+            style={{
+              maxWidth: "140px",
+              position: "absolute",
+              right: "250px",
+              top: "250px",
+            }}
+          />
         </div>
       </div>
     </section>

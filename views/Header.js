@@ -237,31 +237,32 @@ const itemList = [
   },
 ];
 
-export default function Header(props) {
-  const headerRef = useRef();
+// contents of menu button
+const menuButtonList = [
+  {
+    label: "Stake Now",
+    endIcon: "bi-arrow-up-right",
+    variant: "button-primary",
+    href: "https://wallet.assetmantle.one/",
+  },
+];
 
-  useEffect(() => {
-    const scroll = (e) => {
-      if (window.scrollY > 50)
-        headerRef.current.style.backgroundColor = "rgba(0,0,0,0.8)";
-      else if (window.scrollY < 50)
-        headerRef.current.style.backgroundColor = "";
-    };
-    window.addEventListener("scroll", scroll);
-    return () => window.removeEventListener("scroll", scroll);
-  }, []);
+export default function Header(props) {
   return (
     <>
       <header
         className="position-fixed container-fluid top-0 start-0"
-        ref={headerRef}
-        style={{ zIndex: 1200 }}
+        style={{
+          zIndex: 1200,
+          backgroundColor: "rgba(4, 4, 4, 0.8)",
+          backdropFilter: "blur(1px)",
+        }}
       >
         <nav className="container-lg py-3 mx-auto">
           <div className="d-flex align-items-center">
             <div className="d-flex flex-grow-1">
               <img
-                src="/static/Logo.svg"
+                src="/static/asGuardLogo.svg"
                 alt="logo"
                 onClick={() => window.open("/", "_self")}
                 style={{ cursor: "pointer", maxWidth: "200px" }}
@@ -279,7 +280,7 @@ export default function Header(props) {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="d-none d-sm-flex gap-3">
-              {itemList &&
+              {/* {itemList &&
                 Array.isArray(itemList) &&
                 itemList.length > 0 &&
                 itemList.map((data, index) => (
@@ -290,7 +291,22 @@ export default function Header(props) {
                     titleEndIcon={data.endIcon}
                     ratioWidthExist={data.ratioWidthExist}
                   />
-                ))}
+                ))} */}
+              <div className="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+                {menuButtonList &&
+                  Array.isArray(menuButtonList) &&
+                  menuButtonList.length > 0 &&
+                  menuButtonList.map((button, index) => (
+                    <a
+                      key={index}
+                      className={`btn d-flex align-items-center gap-2 ${button.variant}`}
+                      href={button.href}
+                      target="_blank"
+                    >
+                      {button.label} <i className={`bi ${button.endIcon}`}></i>
+                    </a>
+                  ))}
+              </div>
             </div>
           </div>
         </nav>

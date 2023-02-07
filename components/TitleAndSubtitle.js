@@ -51,7 +51,7 @@ const TitleAndSubtitle = (props) => {
     >
       {SectionConfigData.title && (
         <h1
-          className="h1"
+          className="h1 text-uppercase"
           style={{ color: SectionConfigData.titleColor || "inherit" }}
         >
           <NextLink
