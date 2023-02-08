@@ -1,27 +1,7 @@
 import * as React from "react";
-import DiverseActor from "../views/DiverseActor";
-import FastAndEasySetup from "../views/FastAndEasySetup";
-import FeaturedCreators from "../views/FeaturedCreators";
-import FeaturedNFT from "../views/FeaturedNFT";
-import FeatureSection from "../views/FeatureSection";
-import Fractionalized from "../views/Fractionalized";
-import GallerySection from "../views/GallerySection";
 import HeroSection from "../views/HeroSection";
 import StatsSection from "../views/StatsSection";
 
-//
-import ChainSection from "../views/ChainSection";
-import SocialProofSection from "../views/SocialProofSection";
-import TeamSection from "../views/TeamSection";
-import CollabsHeroSection from "../views/CollabsHeroSection";
-import CollabsSection from "../views/CollabsSection";
-import ExplanationSection from "../views/ExplanationSection";
-// import TokenInfo from "../views/TokenInfo";
-import VisionMissionSection from "../views/VisionMissionSection";
-import TokenUtility from "../views/TokenUtility";
-import TokenDistribution from "../views/TokenDistribution";
-import FAQSection from "../views/FAQSection";
-import UniverseSection from "../views/UniverseSection";
 import WhyChooseUsSection from "../views/WhyChooseUsSection";
 import HowToStakeSection from "../views/HowToStakeSection";
 import StakingEcosystems from "../views/StakingEcosystems";
@@ -304,7 +284,30 @@ export async function getStaticProps() {
         name: "Osmosis",
         dimensions: { width: "124px", height: "30px" },
         description: "APR:",
-        learnMoreButton: "https://wallet.assetmantle.one/",
+        learnMoreButton: "/chainDetail",
+        learnMoreDetail: {
+          icon: "/CollabsSection/osmosis.png",
+          chainId: "mantle-1",
+          chainVersion: "v0.3.1",
+          chainName: "mantlechain",
+          token: "MNTL",
+          // chainStatus: {
+          //   staus: "Live",
+          //   endIcon: "",
+          // },
+          // websites: {
+          //   label: "assetmantle.one",
+          //   href: "https://assetmantle.one/",
+          // },
+          // explorers: [
+          //   { label: "ezstaking.tools/assetmantle", href: "" },
+          //   { label: "mintscan.io/asset-mantle", herf: "" },
+          //   { label: "explorer.postcapitalist.io/AssetMantle", herf: "" },
+          //   { label: "explorer.assetmantle.one", herf: "" },
+          //   { label: "assetmantle.explorers.guru", herf: "" },
+          //   { label: "atomscan.com/assetmantle", herf: "" },
+          // ],
+        },
         stakeNowButton: "https://wallet.assetmantle.one/",
       },
       {

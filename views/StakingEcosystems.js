@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { React, useState } from "react";
 import Section from "../components/Section";
 
@@ -117,14 +118,14 @@ export default function CollabsSection({ stakingEcosystemsConfigData }) {
                       </p>
                       {ele.stakeNowButton ? (
                         <div className="d-flex justify-content-end gap-2 mt-4">
-                          <a
-                            className={`btn d-flex align-items-center gap-2 py-2 button-secondary bg-t`}
-                            href={ele.learnMoreButton}
-                            target="_blank"
-                          >
-                            Learn More
-                            <i className={`bi bi-arrow-up-right`}></i>
-                          </a>
+                          <Link href="/chainReport/abc">
+                            <a
+                              className={`btn d-flex align-items-center gap-2 py-2 button-secondary bg-t`}
+                            >
+                              Learn More
+                              <i className={`bi bi-arrow-up-right`}></i>
+                            </a>
+                          </Link>
                           <a
                             className={`btn d-flex align-items-center gap-2 py-2 button-primary`}
                             href={ele.stakeNowButton}
