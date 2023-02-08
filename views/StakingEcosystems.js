@@ -40,14 +40,12 @@ export default function CollabsSection({ stakingEcosystemsConfigData }) {
           stakingEcosystemsConfigData.description
         }
       >
-        {/* Textbox and Number of Search results text */}
         <div className="d-flex flex-column gap-5">
-          {/* Ecosystems */}
           <div className="row flex-wrap">
             {sortedArray.map((ele, index) => {
               return (
                 <div
-                  className="col-12 col-md-4 d-flex justify-content-center p-2"
+                  className="col-12 col-md-6 d-flex justify-content-center p-2"
                   key={index}
                 >
                   <div
@@ -62,13 +60,7 @@ export default function CollabsSection({ stakingEcosystemsConfigData }) {
                       {"heading" in ele ? (
                         "icon" in ele ? (
                           <div className="d-flex flex-row">
-                            <div
-                              className="mb-2"
-                              style={{
-                                width: "100%",
-                                height: "30px",
-                              }}
-                            >
+                            <div className="mb-2" style={ele.dimensions}>
                               <img
                                 src={ele.icon}
                                 alt={ele.icon}
@@ -86,13 +78,7 @@ export default function CollabsSection({ stakingEcosystemsConfigData }) {
                           <h4 className="h4">{ele.heading}</h4>
                         )
                       ) : (
-                        <div
-                          className="mb-2"
-                          style={{
-                            width: "100%",
-                            height: "30px",
-                          }}
-                        >
+                        <div className="mb-2" style={ele.dimensions}>
                           <img
                             src={ele.icon}
                             alt={ele.icon}
@@ -118,7 +104,7 @@ export default function CollabsSection({ stakingEcosystemsConfigData }) {
                       </p>
                       {ele.stakeNowButton ? (
                         <div className="d-flex justify-content-end gap-2 mt-4">
-                          <Link href="/chainReport/abc">
+                          <Link href={ele.learnMoreButton}>
                             <a
                               className={`btn d-flex align-items-center gap-2 py-2 button-secondary bg-t`}
                             >
