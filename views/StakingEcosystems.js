@@ -41,13 +41,10 @@ export default function CollabsSection({ stakingEcosystemsConfigData }) {
         }
       >
         <div className="d-flex flex-column gap-5">
-          <div className="row flex-wrap">
+          <div style={stakingEcosystemsConfigData.cardContainerStyles}>
             {sortedArray.map((ele, index) => {
               return (
-                <div
-                  className="col-12 col-md-6 d-flex justify-content-center p-2"
-                  key={index}
-                >
+                <div key={index}>
                   <div
                     className={`card text-white bg-${stakingEcosystemsConfigData.cardVariant} d-flex flex-column rounded-4 p-3`}
                     style={{

@@ -11,6 +11,25 @@ const chainDetailConfigData = {
     background: "#F2AF13",
     borderRadius: "2px",
   },
+  cardTitleStyles: {
+    fontFamily: "Lato",
+    fontWeight: 400,
+    fontSize: "14px",
+    fontStyle: "normal",
+    lineHeight: "120%",
+    textAlign: "center",
+    textTransform: "capitalize",
+    borderRadius: "32px",
+    backgroundColor: "#ffc640",
+    color: "#21211E",
+    maxWidth: "max-content",
+    padding: "8px 24px",
+  },
+  cardTitleBGStyles: {
+    width: "fit-content",
+    padding: "12px",
+    borderRadius: "16px 16px 0 0",
+  },
 };
 
 export default function ChainReport() {
@@ -51,9 +70,14 @@ export default function ChainReport() {
     >
       <div className="row flex-wrap mt-1 w-100">
         <div className="col-12 col-md-6 d-flex justify-content-center p-2">
-          <div className={`card d-flex bg-t`}>
-            <div className="bg-translucent text-white">
-              <div>Chain Info</div>
+          <div className="card d-flex bg-t w-100">
+            <div
+              className="bg-translucent text-white"
+              style={chainDetailConfigData.cardTitleBGStyles}
+            >
+              <div style={chainDetailConfigData.cardTitleStyles}>
+                Chain Info
+              </div>
             </div>
             <div
               className={`text-white bg-translucent d-flex flex-row`}
@@ -63,6 +87,7 @@ export default function ChainReport() {
                 flexGrow: 1,
                 padding: "32px 34px",
                 gap: "16px",
+                borderRadius: "0 16px 16px 16px",
               }}
             >
               <div>
@@ -81,7 +106,15 @@ export default function ChainReport() {
                     vulnerabilityMetrics.ChainVersion}
                 </p>
                 <p>{chainInfo.chain_name && chainInfo.chain_name}</p>
-                <p>{chainInfo.status && chainInfo.status}</p>
+                <p className="text-capitalize d-flex align-items-center gap-2">
+                  {chainInfo.status && chainInfo.status}
+                  {chainInfo.status &&
+                    (chainInfo.status === "live" ? (
+                      <i className={`bi bi-check-circle text-success`}></i>
+                    ) : (
+                      <i className={`bi bi-x-circle text-danger`}></i>
+                    ))}
+                </p>
                 <p>
                   {chainInfo.website && (
                     <a
@@ -118,9 +151,14 @@ export default function ChainReport() {
           </div>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center p-2">
-          <div className={`card d-flex bg-t`}>
-            <div className="bg-translucent text-white">
-              <div>Chain Info</div>
+          <div className="card d-flex bg-t w-100">
+            <div
+              className="bg-translucent text-white"
+              style={chainDetailConfigData.cardTitleBGStyles}
+            >
+              <div style={chainDetailConfigData.cardTitleStyles}>
+                Vulnerability Metrics
+              </div>
             </div>
             <div
               className={`text-white bg-translucent d-flex flex-row`}
@@ -130,6 +168,7 @@ export default function ChainReport() {
                 flexGrow: 1,
                 padding: "32px 34px",
                 gap: "16px",
+                borderRadius: "0 16px 16px 16px",
               }}
             >
               <div>

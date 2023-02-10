@@ -26,7 +26,7 @@ export default function HowToStakeSection({ howToStakeSectionConfigData }) {
                 key={index}
               >
                 <div
-                  className="card hover-dark-100"
+                  className="card"
                   style={howToStakeSectionConfigData.optionStyles}
                 >
                   <div className="d-flex align-items-center justify-content-center flex-column gap-2 pb-2">
@@ -40,11 +40,12 @@ export default function HowToStakeSection({ howToStakeSectionConfigData }) {
                           backdropFilter: "blur(23.724px)",
                           borderRadius: "50%",
                         }}
+                        className="d-flex align-items-center justify-content-center"
                       >
                         <img
-                          style={{ width: "100%", height: "100%" }}
                           src={step.image}
                           alt={step.title}
+                          style={step.dimensions}
                         />
                       </div>
                     ) : (
