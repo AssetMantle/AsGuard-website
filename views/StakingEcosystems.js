@@ -39,6 +39,7 @@ export default function CollabsSection({ stakingEcosystemsConfigData }) {
           stakingEcosystemsConfigData.description &&
           stakingEcosystemsConfigData.description
         }
+        containerClass={`eco-bg`}
       >
         <div className="d-flex flex-column gap-5">
           <div style={stakingEcosystemsConfigData.cardContainerStyles}>
