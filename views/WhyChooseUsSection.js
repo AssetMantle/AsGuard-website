@@ -11,6 +11,7 @@ export default function WhyChooseUsSection({ whyChooseUsSectionConfigData }) {
         whyChooseUsSectionConfigData.description &&
         whyChooseUsSectionConfigData.description
       }
+      containerClass={`choosing-bg`}
     >
       {Array.isArray(whyChooseUsSectionConfigData.featuresArray) &&
         whyChooseUsSectionConfigData.featuresArray &&
