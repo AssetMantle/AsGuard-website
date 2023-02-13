@@ -25,7 +25,7 @@ export default function Index(props) {
 }
 export async function getStaticProps() {
   const heroSectionConfigData = {
-    sectionStyle: `py-6 py-md-4 mt-2 text-white text-center`,
+    sectionStyle: `text-white text-center`,
     title1: `Guarding your`,
     title2: `staked assets`,
     title2Styles: {
@@ -40,7 +40,7 @@ export async function getStaticProps() {
       variant: "button-primary",
       href: "https://wallet.assetmantle.one/",
     },
-    image: "/hero/BG.png",
+    image: "/hero/bg.png",
     floatingBoxImage1: "/hero/floatingBox1.png",
     floatingBoxImage2: "/hero/floatingBox2.png",
   };
