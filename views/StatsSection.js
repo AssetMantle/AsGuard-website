@@ -4,7 +4,7 @@ import SocialIcons from "../components/SocialIcons";
 
 export default function StatsSection({ statsSectionConfigData }) {
   return (
-    <Section>
+    <Section containerClass={`pt-2 mt-0 stats-bg`}>
       <div className="d-flex flex-column align-items-center">
         <p
           className="text-capitalize text-white"
