@@ -502,3 +502,21 @@ tbody {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.stats-bg {
+  background-image: url("/StatsSection/bg.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.choosing-bg {
+  background-image: url("/WhyChooseUsSection/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.eco-bg {
+  background-image: url("/CollabsSection/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
