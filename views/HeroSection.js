@@ -14,7 +14,7 @@ export default function HeroSection({ heroSectionConfigData }) {
         style={{
           background: `url(${heroSectionConfigData.image}) no-repeat`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center bottom",
           backgroundRepeat: "no-repeat",
           height: "min(928px, 100vh)",
         }}
