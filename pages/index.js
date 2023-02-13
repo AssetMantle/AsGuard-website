@@ -40,9 +40,9 @@ export async function getStaticProps() {
       variant: "button-primary",
       href: "https://wallet.assetmantle.one/",
     },
-    image: "/images/hero/BG.png",
-    floatingBoxImage1: "/images/hero/floatingBox1.png",
-    floatingBoxImage2: "/images/hero/floatingBox2.png",
+    image: "/hero/BG.png",
+    floatingBoxImage1: "/hero/floatingBox1.png",
+    floatingBoxImage2: "/hero/floatingBox2.png",
   };
   const statsSectionConfigData = {
     optionStyles: {
