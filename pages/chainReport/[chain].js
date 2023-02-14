@@ -14,6 +14,7 @@ const chainDetailConfigData = {
   cardTitleBGStyles: {
     width: "fit-content",
     borderRadius: "16px 16px 0 0",
+    marginBottom: "-2px",
   },
 };
 
@@ -55,10 +56,10 @@ export default function ChainReport() {
       containerClass={"chain_report-bg"}
     >
       <div className="row flex-wrap mt-1 w-100">
-        <div className="col-12 col-md-6 d-flex justify-content-center p-2">
+        <div className="col-12 col-lg-6 d-flex justify-content-center px-2 px-sm-3 py-3">
           <div className="d-flex flex-column bg-t w-100">
             <div
-              className="bg-translucent text-white p-3 pb-0"
+              className="bg-translucent p-3 pb-1"
               style={chainDetailConfigData.cardTitleBGStyles}
             >
               <div className="button-primary px-4 py-2">Chain Info</div>
@@ -104,7 +105,7 @@ export default function ChainReport() {
                     <a
                       href={chainInfo.website}
                       target="_blank"
-                      style={{ textDecoration: "none" }}
+                      style={{ textDecoration: "none", wordBreak: "break-all" }}
                       className="text-primary"
                     >
                       {String(chainInfo.website).indexOf("//") > -1
@@ -122,7 +123,10 @@ export default function ChainReport() {
                         <a
                           href={explorer.url}
                           target="_blank"
-                          style={{ textDecoration: "none" }}
+                          style={{
+                            textDecoration: "none",
+                            wordBreak: "break-all",
+                          }}
                           className="text-primary"
                         >
                           {explorer.url.split("//")[1]}
@@ -134,10 +138,10 @@ export default function ChainReport() {
             </div>
           </div>
         </div>
-        <div className="col-12 col-md-6 d-flex justify-content-center p-2">
-          <div className="card d-flex bg-t w-100">
+        <div className="col-12 col-lg-6 d-flex justify-content-center px-2 px-sm-3 py-3">
+          <div className="d-flex flex-column bg-t w-100">
             <div
-              className="bg-translucent text-white p-3 pb-0"
+              className="bg-translucent p-3 pb-1"
               style={chainDetailConfigData.cardTitleBGStyles}
             >
               <div className="button-primary px-3 py-2">
@@ -172,9 +176,7 @@ export default function ChainReport() {
                 <p className="text-uppercase">Trivy</p>
                 <p className="text-uppercase">Grype</p>
                 <p className="text-uppercase">SBOM</p>
-                <p className="text-uppercase" style={{ whiteSpace: "nowrap" }}>
-                  Container Image
-                </p>
+                <p className="text-uppercase">Container Image</p>
               </div>
               <div style={chainDetailConfigData.seperatorLineStyles}></div>
               <div>
@@ -249,7 +251,10 @@ export default function ChainReport() {
                         <a
                           href={vulnerabilityMetrics.ContainerRegistryUrl}
                           target="_blank"
-                          style={{ textDecoration: "none" }}
+                          style={{
+                            textDecoration: "none",
+                            wordBreak: "break-all",
+                          }}
                           className="text-primary"
                         >
                           {container}
