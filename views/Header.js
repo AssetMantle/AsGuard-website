@@ -31,7 +31,7 @@ export default function Header() {
                 style={{ cursor: "pointer", maxWidth: "200px" }}
               />
             </div>
-            <button
+            {/* <button
               className="navbar-toggler d-flex d-sm-none bg-yellow-100"
               type="button"
               data-bs-toggle="collapse"
@@ -41,9 +41,9 @@ export default function Header() {
               aria-label="Toggle navigation"
             >
               <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="d-none d-sm-flex gap-3">
-              {/* {itemList &&
+            </button> */}
+            {/* <div className="d-none d-sm-flex gap-3">
+              {itemList &&
                 Array.isArray(itemList) &&
                 itemList.length > 0 &&
                 itemList.map((data, index) => (
@@ -54,22 +54,22 @@ export default function Header() {
                     titleEndIcon={data.endIcon}
                     ratioWidthExist={data.ratioWidthExist}
                   />
-                ))} */}
-              <div className="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
-                {menuButtonList &&
-                  Array.isArray(menuButtonList) &&
-                  menuButtonList.length > 0 &&
-                  menuButtonList.map((button, index) => (
-                    <a
-                      key={index}
-                      className={`btn d-flex align-items-center gap-2 ${button.variant}`}
-                      href={button.href}
-                      target="_blank"
-                    >
-                      {button.label} <i className={`bi ${button.endIcon}`}></i>
-                    </a>
-                  ))}
-              </div>
+                ))}
+            </div> */}
+            <div className="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+              {menuButtonList &&
+                Array.isArray(menuButtonList) &&
+                menuButtonList.length > 0 &&
+                menuButtonList.map((button, index) => (
+                  <a
+                    key={index}
+                    className={`btn d-flex align-items-center gap-2 ${button.variant}`}
+                    href={button.href}
+                    target="_blank"
+                  >
+                    {button.label} <i className={`bi ${button.endIcon}`}></i>
+                  </a>
+                ))}
             </div>
           </div>
         </nav>
