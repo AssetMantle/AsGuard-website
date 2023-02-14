@@ -20,12 +20,14 @@ export default function HeroSection({ heroSectionConfigData }) {
         }}
       >
         <div
-          className="d-flex justify-content-center gap-2 text-uppercase"
+          className="d-flex align-items-center justify-content-center gap-2 text-uppercase"
           style={{ letterSpacing: "0.8em" }}
         >
-          <h3 className="mb-3 h3">{heroSectionConfigData.title1}</h3>
-          <h3 className="mb-3 h3" style={heroSectionConfigData.title2Styles}>
-            {heroSectionConfigData.title2}
+          <h3 className="mb-3 h3 mx-1 text-center">
+            {heroSectionConfigData.title1}{" "}
+            <span style={heroSectionConfigData.title2Styles}>
+              {heroSectionConfigData.title2}
+            </span>
           </h3>
         </div>
 
