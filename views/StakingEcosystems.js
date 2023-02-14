@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { React, useState } from "react";
+import React, { useState } from "react";
 import Section from "../components/Section";
 
 export default function CollabsSection({ stakingEcosystemsConfigData }) {
@@ -41,41 +41,24 @@ export default function CollabsSection({ stakingEcosystemsConfigData }) {
         }
         containerClass={`eco-bg`}
       >
-        <div className="d-flex flex-column gap-5">
-          <div style={stakingEcosystemsConfigData.cardContainerStyles}>
-            {sortedArray.map((ele, index) => {
-              return (
-                <div key={index}>
-                  <div
-                    className={`card text-white bg-${stakingEcosystemsConfigData.cardVariant} d-flex flex-column rounded-4 p-3`}
-                    style={{
-                      maxWidth: "400px",
-                      height: "100%",
-                      flexGrow: 1,
-                    }}
-                  >
-                    <div className="card-body">
-                      {"heading" in ele ? (
-                        "icon" in ele ? (
-                          <div className="d-flex flex-row">
-                            <div className="mb-2" style={ele.dimensions}>
-                              <img
-                                src={ele.icon}
-                                alt={ele.icon}
-                                style={{
-                                  width: "100%",
-                                  height: "100%",
-                                  objectFit: "contain",
-                                  objectPosition: "left",
-                                }}
-                              />
-                            </div>
-                            <h4 className="h4">{ele.heading}</h4>
-                          </div>
-                        ) : (
-                          <h4 className="h4">{ele.heading}</h4>
-                        )
-                      ) : (
+        <div
+          className="d-flex flex-wrap align-items-center gap-3 mx-auto my-5"
+          style={{ maxWidth: "800px" }}
+        >
+          {React.Children.toArray(
+            sortedArray.map((ele) => (
+              <div
+                className={`card text-white bg-${stakingEcosystemsConfigData.cardVariant} d-flex flex-column rounded-4 p-3`}
+                style={{
+                  width: "min(350px,100%)",
+                  height: "100%",
+                  flexGrow: 1,
+                }}
+              >
+                <div className="card-body">
+                  {"heading" in ele ? (
+                    "icon" in ele ? (
+                      <div className="d-flex flex-row">
                         <div className="mb-2" style={ele.dimensions}>
                           <img
                             src={ele.icon}
@@ -88,55 +71,71 @@ export default function CollabsSection({ stakingEcosystemsConfigData }) {
                             }}
                           />
                         </div>
-                      )}
-
-                      <h4
-                        className={`${stakingEcosystemsConfigData.nameVariant} mt-4`}
-                      >
-                        {ele.name}
-                      </h4>
-                      <p
-                        className={`${stakingEcosystemsConfigData.descriptionVariant} mt-2`}
-                      >
-                        {ele.description}
-                      </p>
-                      {ele.stakeNowButton ? (
-                        <div className="d-flex justify-content-end gap-2 mt-4">
-                          <Link href={ele.learnMoreButton}>
-                            <a
-                              className={`btn d-flex align-items-center gap-2 py-2 button-secondary bg-t`}
-                            >
-                              Learn More
-                              <i className={`bi bi-arrow-up-right`}></i>
-                            </a>
-                          </Link>
-                          <a
-                            className={`btn d-flex align-items-center gap-2 py-2 button-primary`}
-                            href={ele.stakeNowButton}
-                            target="_blank"
-                          >
-                            Stake Now
-                            <i className={`bi bi-arrow-up-right`}></i>
-                          </a>
-                        </div>
-                      ) : (
-                        <div className="d-flex justify-content-end gap-2 mt-4">
-                          <a
-                            className={`btn d-flex align-items-center gap-2 py-2 button-primary disabled`}
-                            href={ele.stakeNowButton}
-                            target="_blank"
-                          >
-                            Coming Soon
-                            <i className={`bi bi-arrow-up-right`}></i>
-                          </a>
-                        </div>
-                      )}
+                        <h4 className="h4">{ele.heading}</h4>
+                      </div>
+                    ) : (
+                      <h4 className="h4">{ele.heading}</h4>
+                    )
+                  ) : (
+                    <div className="mb-2" style={ele.dimensions}>
+                      <img
+                        src={ele.icon}
+                        alt={ele.icon}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "contain",
+                          objectPosition: "left",
+                        }}
+                      />
                     </div>
-                  </div>
+                  )}
+
+                  <h4
+                    className={`${stakingEcosystemsConfigData.nameVariant} mt-4`}
+                  >
+                    {ele.name}
+                  </h4>
+                  <p
+                    className={`${stakingEcosystemsConfigData.descriptionVariant} mt-2`}
+                  >
+                    {ele.description}
+                  </p>
+                  {ele.stakeNowButton ? (
+                    <div className="d-flex justify-content-end gap-2 mt-4">
+                      <Link href={ele.learnMoreButton}>
+                        <a
+                          className={`btn d-flex align-items-center gap-2 py-2 button-secondary bg-t`}
+                        >
+                          Learn More
+                          <i className={`bi bi-arrow-up-right`}></i>
+                        </a>
+                      </Link>
+                      <a
+                        className={`btn d-flex align-items-center gap-2 py-2 button-primary`}
+                        href={ele.stakeNowButton}
+                        target="_blank"
+                      >
+                        Stake Now
+                        <i className={`bi bi-arrow-up-right`}></i>
+                      </a>
+                    </div>
+                  ) : (
+                    <div className="d-flex justify-content-end gap-2 mt-4">
+                      <a
+                        className={`btn d-flex align-items-center gap-2 py-2 button-primary disabled`}
+                        href={ele.stakeNowButton}
+                        target="_blank"
+                      >
+                        Coming Soon
+                        <i className={`bi bi-arrow-up-right`}></i>
+                      </a>
+                    </div>
+                  )}
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            ))
+          )}
         </div>
       </Section>
     </>
