@@ -25,6 +25,7 @@ $dark-200: #111111;
 
 $success: #148919;
 $error: #e44651;
+$purple: #5200ff;
 
 $nav-bg: $dark-100;
 $primary-light: $white-100;
@@ -221,6 +222,9 @@ a:hover {
 }
 .text-primary {
   color: $primary-main !important;
+}
+.text-purple {
+  color: $purple;
 }
 .border-color-light_gray {
   border-color: $gray-100;
@@ -510,13 +514,24 @@ tbody {
 }
 .choosing-bg {
   background-image: url("/WhyChooseUsSection/bg.png");
-  background-position: center;
+  background-position: left center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .eco-bg {
   background-image: url("/CollabsSection/bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.purple_line_res {
+  width: 0.2em;
+  height: 100%;
+  background: $purple;
+  border-radius: 2px;
+  @media (max-width: 576px) {
+    height: 0.1em;
+    width: 100%;
+  }
 }
