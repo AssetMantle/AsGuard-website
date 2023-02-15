@@ -11,37 +11,33 @@ export default function WhyChooseUsSection({ whyChooseUsSectionConfigData }) {
         whyChooseUsSectionConfigData.description &&
         whyChooseUsSectionConfigData.description
       }
+      containerClass={`choosing-bg`}
     >
       {Array.isArray(whyChooseUsSectionConfigData.featuresArray) &&
         whyChooseUsSectionConfigData.featuresArray &&
         whyChooseUsSectionConfigData.featuresArray.length > 0 && (
-          <div className="row flex-wrap mt-1 p-5">
-            {whyChooseUsSectionConfigData.featuresArray.map(
-              (feature, index) => (
-                <div
-                  className="col-12 col-md-6 d-flex justify-content-center p-2"
-                  key={index}
-                >
+          <div className="row flex-wrap mt-1 py-5 px-1 px-md-5 w-100">
+            {React.Children.toArray(
+              whyChooseUsSectionConfigData.featuresArray.map((feature) => (
+                <div className="col-12 col-lg-6 d-flex justify-content-center p-2">
                   <div
-                    className={`card text-white bg-translucent d-flex flex-row rounded-4`}
+                    className={`text-white bg-translucent d-flex flex-column flex-sm-row rounded-4 h-100 p-4 gap-3`}
                     style={{
                       maxWidth: "600px",
-                      height: "100%",
                       flexGrow: 1,
-                      padding: "32px 34px",
-                      gap: "16px",
                     }}
                   >
                     {feature.image && typeof feature.image === "string" ? (
                       <div
                         style={{
                           width: "110px",
-                          height: "110px",
+                          minWidth: "110px",
+                          aspectRatio: "1/1",
                           alignSelf: "center",
                         }}
                       >
                         <img
-                          style={{ width: "110px", aspectRatio: "1/1" }}
+                          style={{ width: "100%", aspectRatio: "1/1" }}
                           src={feature.image}
                           alt={feature.title}
                         />
@@ -49,9 +45,7 @@ export default function WhyChooseUsSection({ whyChooseUsSectionConfigData }) {
                     ) : (
                       feature.image
                     )}
-                    <div
-                      style={whyChooseUsSectionConfigData.seperatorLineStyles}
-                    ></div>
+                    <div className="purple_line_res"></div>
                     <div>
                       {feature.title && (
                         <p
@@ -64,7 +58,7 @@ export default function WhyChooseUsSection({ whyChooseUsSectionConfigData }) {
                     </div>
                   </div>
                 </div>
-              )
+              ))
             )}
           </div>
         )}

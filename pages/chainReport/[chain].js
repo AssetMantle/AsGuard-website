@@ -11,24 +11,10 @@ const chainDetailConfigData = {
     background: "#F2AF13",
     borderRadius: "2px",
   },
-  cardTitleStyles: {
-    fontFamily: "Lato",
-    fontWeight: 400,
-    fontSize: "14px",
-    fontStyle: "normal",
-    lineHeight: "120%",
-    textAlign: "center",
-    textTransform: "capitalize",
-    borderRadius: "32px",
-    backgroundColor: "#ffc640",
-    color: "#21211E",
-    maxWidth: "max-content",
-    padding: "8px 24px",
-  },
   cardTitleBGStyles: {
     width: "fit-content",
-    padding: "12px",
     borderRadius: "16px 16px 0 0",
+    marginBottom: "-2px",
   },
 };
 
@@ -67,17 +53,16 @@ export default function ChainReport() {
       subTitle={
         chainDetailConfigData.description && chainDetailConfigData.description
       }
+      containerClass={"chain_report-bg"}
     >
       <div className="row flex-wrap mt-1 w-100">
-        <div className="col-12 col-md-6 d-flex justify-content-center p-2">
-          <div className="card d-flex bg-t w-100">
+        <div className="col-12 col-lg-6 d-flex justify-content-center px-2 px-sm-3 py-3">
+          <div className="d-flex flex-column bg-t w-100">
             <div
-              className="bg-translucent text-white"
+              className="bg-translucent p-3 pb-1"
               style={chainDetailConfigData.cardTitleBGStyles}
             >
-              <div style={chainDetailConfigData.cardTitleStyles}>
-                Chain Info
-              </div>
+              <div className="button-primary px-4 py-2">Chain Info</div>
             </div>
             <div
               className={`text-white bg-translucent d-flex flex-row`}
@@ -91,12 +76,12 @@ export default function ChainReport() {
               }}
             >
               <div>
-                <p>Chain ID</p>
-                <p>Chain Version</p>
-                <p>Chain Name</p>
-                <p>Chain Status</p>
-                <p>Websites</p>
-                <p>Explorers</p>
+                <p className="text-uppercase">Chain ID</p>
+                <p className="text-uppercase">Chain Version</p>
+                <p className="text-uppercase">Chain Name</p>
+                <p className="text-uppercase">Chain Status</p>
+                <p className="text-uppercase">Websites</p>
+                <p className="text-uppercase">Explorers</p>
               </div>
               <div style={chainDetailConfigData.seperatorLineStyles}></div>
               <div>
@@ -120,7 +105,7 @@ export default function ChainReport() {
                     <a
                       href={chainInfo.website}
                       target="_blank"
-                      style={{ textDecoration: "none" }}
+                      style={{ textDecoration: "none", wordBreak: "break-all" }}
                       className="text-primary"
                     >
                       {String(chainInfo.website).indexOf("//") > -1
@@ -138,7 +123,10 @@ export default function ChainReport() {
                         <a
                           href={explorer.url}
                           target="_blank"
-                          style={{ textDecoration: "none" }}
+                          style={{
+                            textDecoration: "none",
+                            wordBreak: "break-all",
+                          }}
                           className="text-primary"
                         >
                           {explorer.url.split("//")[1]}
@@ -150,13 +138,13 @@ export default function ChainReport() {
             </div>
           </div>
         </div>
-        <div className="col-12 col-md-6 d-flex justify-content-center p-2">
-          <div className="card d-flex bg-t w-100">
+        <div className="col-12 col-lg-6 d-flex justify-content-center px-2 px-sm-3 py-3">
+          <div className="d-flex flex-column bg-t w-100">
             <div
-              className="bg-translucent text-white"
+              className="bg-translucent p-3 pb-1"
               style={chainDetailConfigData.cardTitleBGStyles}
             >
-              <div style={chainDetailConfigData.cardTitleStyles}>
+              <div className="button-primary px-3 py-2">
                 Vulnerability Metrics
               </div>
             </div>
@@ -172,15 +160,23 @@ export default function ChainReport() {
               }}
             >
               <div>
-                <p>Vulnerability</p>
-                <p style={{ color: "#E44651" }}>Critical</p>
-                <p style={{ color: "#FF9133" }}>High</p>
-                <p style={{ color: "#6FB4B5" }}>Mid</p>
-                <p style={{ color: "#148919" }}>Low</p>
-                <p>Trivy</p>
-                <p>Grype</p>
-                <p>SBOM</p>
-                <p>Container Image</p>
+                <p className="text-uppercase">Vulnerability</p>
+                <p className="text-uppercase" style={{ color: "#E44651" }}>
+                  Critical
+                </p>
+                <p className="text-uppercase" style={{ color: "#FF9133" }}>
+                  High
+                </p>
+                <p className="text-uppercase" style={{ color: "#6FB4B5" }}>
+                  Mid
+                </p>
+                <p className="text-uppercase" style={{ color: "#148919" }}>
+                  Low
+                </p>
+                <p className="text-uppercase">Trivy</p>
+                <p className="text-uppercase">Grype</p>
+                <p className="text-uppercase">SBOM</p>
+                <p className="text-uppercase">Container Image</p>
               </div>
               <div style={chainDetailConfigData.seperatorLineStyles}></div>
               <div>
@@ -255,7 +251,10 @@ export default function ChainReport() {
                         <a
                           href={vulnerabilityMetrics.ContainerRegistryUrl}
                           target="_blank"
-                          style={{ textDecoration: "none" }}
+                          style={{
+                            textDecoration: "none",
+                            wordBreak: "break-all",
+                          }}
                           className="text-primary"
                         >
                           {container}

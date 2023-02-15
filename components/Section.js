@@ -8,11 +8,12 @@ const Section = (props) => {
     background = "none",
     backgroundColor = "transparent",
     children,
+    containerClass = "",
   } = props;
 
   return (
     <section
-      className="my-16 py-4 text-sm-center text-md-start"
+      className={`my-16 py-4 text-sm-center text-md-start ${containerClass}`}
       style={{
         backgroundColor,
       }}

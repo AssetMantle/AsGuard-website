@@ -25,7 +25,7 @@ export default function Index(props) {
 }
 export async function getStaticProps() {
   const heroSectionConfigData = {
-    sectionStyle: `py-6 py-md-4 mt-2 text-white text-center`,
+    sectionStyle: `text-white text-center`,
     title1: `Guarding your`,
     title2: `staked assets`,
     title2Styles: {
@@ -40,9 +40,9 @@ export async function getStaticProps() {
       variant: "button-primary",
       href: "https://wallet.assetmantle.one/",
     },
-    image: "/images/hero/BG.png",
-    floatingBoxImage1: "/images/hero/floatingBox1.png",
-    floatingBoxImage2: "/images/hero/floatingBox2.png",
+    image: "/hero/bg.png",
+    floatingBoxImage1: "/hero/floatingBox1.png",
+    floatingBoxImage2: "/hero/floatingBox2.png",
   };
   const statsSectionConfigData = {
     optionStyles: {
@@ -54,7 +54,7 @@ export async function getStaticProps() {
       flexDirection: "column",
     },
     seperatorLineStyles: {
-      width: "380px",
+      width: "min(380px, 100%)",
       border: ".5px solid #FFFDFA",
       height: "0px",
       borderRadius: "2px",
@@ -65,20 +65,9 @@ export async function getStaticProps() {
       "The enterprise-grade blockchain infrastructure of Asgaurd enables you to grow your cryptocurrency holdings securely. Boost your earnings by taking advantage of decentralized proof-of-stake consensus networks.",
     descriptionStyle: {
       maxWidth: "min(630px, 100%)",
-      margin: "0 auto",
       width: "630px",
-      textAlign: "center",
     },
-    socialLinkPillStyles: {
-      width: "auto",
-      background:
-        "linear-gradient(157.26deg, rgba(217, 217, 217, 0.14) -5.39%, rgba(217, 217, 217, 0.07) 108.05%)",
-      backdropFilter: "blur(23.724px)",
-      borderRadius: "100px",
-      padding: "8px 36px",
-      marginTop: "32px",
-      marginBottom: "76px",
-    },
+    socialLinkPillStyles: {},
     stats: [
       {
         title: "00m",
@@ -102,32 +91,17 @@ export async function getStaticProps() {
       },
     ],
     stateCardStyles: {
-      maxWidth: "290px",
-      minWidth: "220px",
-      boxShadow: "none",
-      height: "100%",
-      padding: "12px",
-      display: "flex",
-      flexDirection: "column",
-      background: "transparent",
+      width: "min(180px, 100%)",
     },
     statsTitleStyles: {
       fontSize: "54px",
       fontWeight: "700",
       lineHeight: "96px",
       letterSpacing: "0.03em",
-      textTransform: "uppercase",
-      color: "#FFFDFA",
       textShadow: "0px 0px 50px rgba(0, 0, 0, 0.75)",
-      textAlign: "left",
     },
     statsSubTitleStyles: {
-      fontSize: "12px",
       letterSpacing: "0.2em",
-      textTransform: "uppercase",
-      color: "#F2AF13",
-      textAlign: "left",
-      margin: "0px",
     },
     plusImage: "/StatsSection/+.png",
     plusImageStyles: {
@@ -143,20 +117,6 @@ export async function getStaticProps() {
     textAlign: "center",
     optionContainerStyles: { gap: "14px" },
     optionContainerStyleClasses: `d-flex align-items-center justify-content-center flex-wrap mt-5`,
-    optionStyles: {
-      background: "transparent",
-      maxWidth: "374px",
-      boxShadow: "none",
-      padding: "16px 22px",
-      minHeight: "331px",
-      transition: "all 0.3s ease-in-out",
-    },
-    seperatorLineStyles: {
-      width: ".2em",
-      height: "100%",
-      background: "#5100FF",
-      borderRadius: "2px",
-    },
     title: "WHY CHOOSE US",
     description:
       "Find out why AsGuard is one of the pioneers in the theatre of ‘Staking-as-a-Service’",
@@ -282,16 +242,6 @@ export async function getStaticProps() {
     nameColor: "primary.main",
     filterColor: "primary",
     descriptionVariant: "body2",
-    cardContainerStyles: {
-      margin: "20px auto",
-      width: "800px",
-      height: "500px",
-      display: "grid",
-      gridTemplateColumns: "400px 400px",
-      gridRow: "auto auto",
-      gridColumnGap: "20px",
-      gridRowGap: "20px",
-    },
     list: [
       {
         icon: "/CollabsSection/mantlePlace.svg",

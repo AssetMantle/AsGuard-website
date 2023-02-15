@@ -1,164 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { FiLinkedin, FiGithub, FiTwitter } from "react-icons/fi";
-import { TbBrandTelegram, TbBrandDiscord } from "react-icons/tb";
-import { MdNorthEast } from "react-icons/md";
 import SocialIcons from "../components/SocialIcons";
-import NextLink from "../components/NextLink";
-
-const FooterConfigData = {
-  showTopData: true,
-  titleVariant: "body2",
-  colOne: {
-    title: "Email",
-    list: [
-      {
-        title: "For information & support:",
-        text: "hello@assetmantle.one",
-        email: "hello@assetmantle.one",
-      },
-      {
-        title: "For collaborations & interests:",
-        text: "communications@assetmantle.one",
-        email: "communications@assetmantle.one",
-      },
-    ],
-  },
-  colTwo: {
-    title: "Placeholder",
-    list: [
-      {
-        title: "Documentation",
-        link: {
-          text: "Documentation",
-          href: "https://docs.assetmantle.one/",
-        },
-      },
-      {
-        title: "Blog",
-        link: {
-          text: "Blog",
-          href: "http://blog.assetmantle.one/",
-        },
-      },
-      {
-        title: "Whitepaper",
-        link: {
-          text: "Whitepaper",
-          href: "https://docs.assetmantle.one/AssetMantle_Whitepaper/",
-        },
-      },
-      {
-        title: "Buy $MNTL",
-        link: {
-          text: "Buy $MNTL",
-          href: "https://app.osmosis.zone/?from=USDC&to=MNTL",
-        },
-      },
-      {
-        title: "Tokenomics",
-        link: {
-          text: "Tokenomics",
-          href: "/about#mntl-token-distribution",
-        },
-      },
-    ],
-  },
-  colThree: {
-    title: "Products",
-    list: [
-      {
-        title: "MantlePlace",
-        link: {
-          text: "MantlePlace",
-          href: "https://marketplace.assetmantle.one/",
-        },
-      },
-      {
-        title: "MantleBuilder",
-        link: {
-          text: "MantleBuilder",
-          href: "https://docs.assetmantle.one/MantleBuilder_Overview/",
-        },
-      },
-      {
-        title: "MantleWallet",
-        link: {
-          text: "MantleWallet",
-          href: "https://wallet.assetmantle.one/",
-        },
-      },
-      {
-        title: "MantleExplorer",
-        link: {
-          text: "MantleExplorer",
-          href: "https://explorer.assetmantle.one/",
-        },
-      },
-      {
-        title: "MantlePlace Devnet",
-        link: {
-          text: "MantlePlace Devnet",
-          href: "https://devnet.assetmantle.one/",
-        },
-      },
-      {
-        title: "Mantle-1 Chain",
-        link: {
-          text: "Mantle-1 Chain",
-          href: "/about#mntl-token-info",
-        },
-      },
-    ],
-  },
-  colFour: {
-    title: "Placeholder",
-    list: [
-      {
-        title: "interNFT",
-        link: {
-          text: "interNFT",
-          href: "https://internft.org/",
-        },
-      },
-      {
-        title: "Grants",
-        link: {
-          text: "Grants",
-          href: "https://grants.assetmantle.one/",
-        },
-      },
-      {
-        title: "Airdrops",
-        link: {
-          text: "Airdrops",
-          href: "https://airdrop.assetmantle.one/",
-        },
-      },
-      {
-        title: "About",
-        link: {
-          text: "About",
-          href: "/about",
-        },
-      },
-      {
-        title: "Ecosystems",
-        link: {
-          text: "Ecosystems",
-          href: "/ecosystems",
-        },
-      },
-      {
-        title: "Access our Resources",
-        link: {
-          icon: <MdNorthEast />,
-          text: "MediaKit",
-          href: "https://docs.assetmantle.one/MediaKit",
-        },
-      },
-    ],
-  },
-};
 
 export default function Footer(props) {
   const backToTopRef = useRef();
@@ -174,8 +15,8 @@ export default function Footer(props) {
     <>
       <footer sx={{ py: 8 }} className="py-3 bg-translucent text-white">
         <div className="container-lg d-flex flex-column gap-2">
-          <div className="d-flex align-items-center pt-3 pb-3 gap-2 flex-column flex-sm-row justify-content-between align-items-center">
-            <div className="d-flex align-items-center gap-4">
+          <div className="d-flex align-items-center pt-3 pb-3 px-2 gap-4 flex-column flex-lg-row justify-content-between align-items-center">
+            <div className="d-flex flex-column flex-sm-row justify-content-sm-between justify-content-lg-start align-items-center gap-4 w-100">
               <img
                 src="/static/asGuardLogo.svg"
                 style={{ maxWidth: "200px" }}
@@ -184,7 +25,7 @@ export default function Footer(props) {
                 © AsGuard {new Date().getFullYear()} - All rights reserved{" "}
               </p>
             </div>
-            <div className="d-flex align-items-center gap-4">
+            <div className="d-flex flex-column flex-sm-row justify-content-sm-between justify-content-lg-end align-items-center gap-4 w-100">
               <SocialIcons
                 additionalClass="justify-content-center justify-content-md-start body1"
                 spacing={3}
