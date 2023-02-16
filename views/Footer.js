@@ -4,6 +4,10 @@ import SocialIcons from "../components/SocialIcons";
 export default function Footer(props) {
   const backToTopRef = useRef();
 
+  const scrollTop = (e) => {
+    window.scrollTo(0, 0);
+  };
+
   useEffect(() => {
     const scroll = (e) => {
       backToTopRef.current.style.opacity = window.scrollY / 600;
@@ -43,6 +47,7 @@ export default function Footer(props) {
         ref={backToTopRef}
         className="back-to-top text-white position-fixed bottom-0 end-0 pb-3 pe-3"
         style={{ opacity: "0" }}
+        onClick={scrollTop}
       >
         <div
           className="d-flex align-items-center justify-content-center rounded-circle bg-gray-800 px-3 py-2  bg-yellow-100-hover"
