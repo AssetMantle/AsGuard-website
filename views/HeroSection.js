@@ -12,7 +12,7 @@ export default function HeroSection({ heroSectionConfigData }) {
       <div
         className="bg-image text-center d-flex flex-column justify-content-center align-items-center w-100 py-6 py-md-4 mt-2"
         style={{
-          background: `url(${heroSectionConfigData.image}) no-repeat`,
+          backgroundImage: `url(${heroSectionConfigData.image})`,
           backgroundSize: "cover",
           backgroundPosition: "center bottom",
           backgroundRepeat: "no-repeat",

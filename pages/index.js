@@ -195,7 +195,7 @@ export async function getStaticProps() {
         linkColor: "text-primary",
       },
       {
-        image: "/HowToStakeSection/acquire.png",
+        image: "/HowToStakeSection/Acquire.png",
         title: "acquire",
         titleColor: "text-primary",
         description: "Acquire tokens from an on-ramp solution.",
@@ -244,7 +244,7 @@ export async function getStaticProps() {
     descriptionVariant: "body2",
     list: [
       {
-        icon: "/CollabsSection/mantlePlace.svg",
+        icon: "/CollabsSection/mantleplace.svg",
         name: "MantleChain (Mainnet)",
         dimensions: { width: "134px", height: "30px" },
         description: "APR:",
