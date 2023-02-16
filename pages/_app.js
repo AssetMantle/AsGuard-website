@@ -4,7 +4,6 @@ import * as React from "react";
 import Layout from "../components/layout";
 
 // bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
 // custom stylings
 import "../config/styles.scss";
 
