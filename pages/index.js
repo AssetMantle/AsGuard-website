@@ -64,8 +64,7 @@ export async function getStaticProps() {
     description:
       "The enterprise-grade blockchain infrastructure of Asgaurd enables you to grow your cryptocurrency holdings securely. Boost your earnings by taking advantage of decentralized proof-of-stake consensus networks.",
     descriptionStyle: {
-      maxWidth: "min(630px, 100%)",
-      width: "630px",
+      width: "min(842px, 100%)",
     },
     socialLinkPillStyles: {},
     stats: [
@@ -117,7 +116,7 @@ export async function getStaticProps() {
     textAlign: "center",
     optionContainerStyles: { gap: "14px" },
     optionContainerStyleClasses: `d-flex align-items-center justify-content-center flex-wrap mt-5`,
-    title: "WHY CHOOSE US",
+    title: "Why choose us?",
     description:
       "Find out why AsGuard is one of the pioneers in the theatre of ‘Staking-as-a-Service’",
     featuresArray: [
@@ -125,6 +124,7 @@ export async function getStaticProps() {
         image: "/WhyChooseUsSection/NeverFailingService.svg",
         title: "Never-failing service",
         titleColor: "text-primary",
+        titleVariant: "h4",
         description:
           "To ensure uninterrupted service, our systems use highly available, distributed and redundant nodes across multiple data centres in various geographical regions.",
         descriptionVariant: "body2",
@@ -132,8 +132,9 @@ export async function getStaticProps() {
       },
       {
         image: "/WhyChooseUsSection/StateOfTheArtInfrastructure.svg",
-        title: "state of the art infrastructure",
+        title: "State of the art infrastructure",
         titleColor: "text-primary",
+        titleVariant: "h4",
         description:
           "Our state-of-the-art infrastructure is automatically configured to avoid the risks associated with manual deployment. A professionally designed key management system ensures effective and distributed control over cryptographic materials.",
         descriptionVariant: "body2",
@@ -141,8 +142,9 @@ export async function getStaticProps() {
       },
       {
         image: "/WhyChooseUsSection/CuttingEdgeSecurity.svg",
-        title: "CUTTING-EDGE seCURITY",
+        title: "Cutting-edge security",
         titleColor: "text-primary",
+        titleVariant: "h4",
         description:
           "We protect our validators from cyber and physical attacks through a robust, comprehensive security setup. Furthermore, we maintain a constant eye on operations with our global team and stay prepared to react immediately to any incidents, major or minor.",
         descriptionVariant: "body2",
@@ -150,8 +152,9 @@ export async function getStaticProps() {
       },
       {
         image: "/WhyChooseUsSection/LowCommissionHighRewards.svg",
-        title: "low commission & high rewards",
+        title: "Low commission & High rewards",
         titleColor: "text-primary",
+        titleVariant: "h4",
         description:
           "To ensure uninterrupted service, our systems use highly available, distributed and redundant nodes across multiple data centres in various geographical regions.",
         descriptionVariant: "body2",
@@ -175,7 +178,7 @@ export async function getStaticProps() {
     descriptionVariant: "body2",
     descriptionColor: "text-white",
     textAlign: "center", // >>> default: left
-    title: "How to stake",
+    title: "How to Stake?",
     titleComponent: "h1",
     endIcon: "keyboard_arrow_right",
     description:
@@ -186,6 +189,7 @@ export async function getStaticProps() {
         image: "/HowToStakeSection/Create.png",
         title: "Create",
         titleColor: "text-primary",
+        titleVariant: "h4",
         description: "Create a wallet for your desired cosmos chain.",
         descriptionVariant: "body2",
         descriptionColor: "text-white",
@@ -198,6 +202,7 @@ export async function getStaticProps() {
         image: "/HowToStakeSection/Acquire.png",
         title: "acquire",
         titleColor: "text-primary",
+        titleVariant: "h4",
         description: "Acquire tokens from an on-ramp solution.",
         descriptionVariant: "body2",
         descriptionColor: "text-white",
@@ -210,6 +215,7 @@ export async function getStaticProps() {
         image: "/HowToStakeSection/Stake.png",
         title: "stake",
         titleColor: "text-primary",
+        titleVariant: "h4",
         description: "Delegate your acquired tokens to Asguard.",
         descriptionVariant: "body2",
         descriptionColor: "text-white",
@@ -222,6 +228,7 @@ export async function getStaticProps() {
         image: "/HowToStakeSection/Earn.png",
         title: "earn",
         titleColor: "text-primary",
+        titleVariant: "h4",
         description: "Claim rewards on your staked tokens.",
         descriptionVariant: "body2",
         descriptionColor: "text-white",
@@ -233,7 +240,7 @@ export async function getStaticProps() {
     ],
   };
   const stakingEcosystemsConfigData = {
-    title: "staking ecosystems",
+    title: "Staking Ecosystems",
     description:
       "Find the list of ecosystems enabling AsGuard based staking, and their performance stats",
     cardVariant: "translucent",
