@@ -7,15 +7,17 @@ const TitleAndSubtitle = (props) => {
     subTitle = null,
     textAlign = "center",
     isContent = false,
+    subtitleWidth = 836,
   } = props;
+
   const SectionConfigData = {
     title,
     titleVariant: isContent ? "h2" : "h1",
-    titleColor: "secondary.light",
+    titleColor: "text-white",
     subTitle,
     subTitleVariant: "subtitle2",
-    subTitleColor: "secondary.light",
-    subTitleStyle: { maxWidth: "min(836px, 100%)" }, // object of styles or false
+    subTitleColor: "text-white",
+    // subTitleStyle: { maxWidth: "min(836px, 100%)" }, // object of styles or false
   };
 
   return (
@@ -51,7 +53,7 @@ const TitleAndSubtitle = (props) => {
     >
       {SectionConfigData.title && (
         <h1
-          className="h1 text-uppercase"
+          className="h1 mb-0"
           style={{ color: SectionConfigData.titleColor || "inherit" }}
         >
           <NextLink
@@ -72,9 +74,10 @@ const TitleAndSubtitle = (props) => {
 
       {SectionConfigData.subTitle && (
         <p
-          className="subtitle1"
+          className="subtitle1 mb-5"
           style={{
             color: SectionConfigData.titleColor || "inherit",
+            width: `min(${subtitleWidth}px, 100%)`,
             ...SectionConfigData.subTitleStyle,
           }}
         >
