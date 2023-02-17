@@ -5,6 +5,7 @@ const Section = (props) => {
   const {
     title = null,
     subTitle = null,
+    subtitleWidth,
     background = "none",
     backgroundColor = "transparent",
     children,
@@ -26,7 +27,11 @@ const Section = (props) => {
       >
         {title || subTitle ? (
           <div className="d-flex flex-column align-items-center gap-8">
-            <TitleAndSubtitle title={title} subTitle={subTitle} />
+            <TitleAndSubtitle
+              title={title}
+              subTitle={subTitle}
+              subtitleWidth={subtitleWidth}
+            />
             {children}
           </div>
         ) : (
