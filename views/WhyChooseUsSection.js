@@ -12,6 +12,7 @@ export default function WhyChooseUsSection({ whyChooseUsSectionConfigData }) {
         whyChooseUsSectionConfigData.description
       }
       containerClass={`choosing-bg`}
+      subtitleWidth={630}
     >
       {Array.isArray(whyChooseUsSectionConfigData.featuresArray) &&
         whyChooseUsSectionConfigData.featuresArray &&
@@ -48,13 +49,17 @@ export default function WhyChooseUsSection({ whyChooseUsSectionConfigData }) {
                     <div className="purple_line_res"></div>
                     <div>
                       {feature.title && (
-                        <p
-                          className={`${feature.titleVariant} ${feature.titleColor} text-uppercase mb-1`}
+                        <h5
+                          className={`${feature.titleVariant} ${feature.titleColor} mb-1`}
                         >
                           {feature.title}
+                        </h5>
+                      )}
+                      {feature.description && (
+                        <p className={`${feature.descriptionVariant}`}>
+                          {feature.description}
                         </p>
                       )}
-                      {feature.description && <p>{feature.description}</p>}
                     </div>
                   </div>
                 </div>
