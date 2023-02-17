@@ -7,7 +7,7 @@ export default function StatsSection({ statsSectionConfigData }) {
     <Section containerClass={`pt-2 mt-0 stats-bg`}>
       <div className="d-flex flex-column align-items-center">
         <p
-          className="text-capitalize text-white text-center m-0 mx-auto"
+          className="text-capitalize text-white text-center m-0 mx-auto subtitle1"
           style={statsSectionConfigData.descriptionStyle}
         >
           {statsSectionConfigData.description}
