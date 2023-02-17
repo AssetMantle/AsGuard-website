@@ -40,6 +40,7 @@ export default function CollabsSection({ stakingEcosystemsConfigData }) {
           stakingEcosystemsConfigData.description
         }
         containerClass={`eco-bg`}
+        subtitleWidth={630}
       >
         <div
           className="d-flex flex-wrap align-items-center gap-3 mx-auto my-5"
@@ -99,7 +100,7 @@ export default function CollabsSection({ stakingEcosystemsConfigData }) {
                   <p
                     className={`${stakingEcosystemsConfigData.descriptionVariant} mt-2`}
                   >
-                    {ele.description}
+                    {ele.description} 0.00%
                   </p>
                   {ele.stakeNowButton ? (
                     <div className="d-flex justify-content-end gap-2 mt-4">
