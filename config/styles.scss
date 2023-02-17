@@ -1,6 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@200;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 // variables
 $yellow-100: #ffc640;
 $yellow-200: #f2af13;
@@ -46,6 +46,9 @@ $background-radial: radial-gradient(
   $yellow-200 100%
 );
 $background-selected-tag: $yellow-900;
+// $fontPrimary: "Inter", "Roboto";
+$fontPrimary: "Roboto", "Inter";
+$fontSecondary: "Lato", sans-serif;
 
 * {
   scroll-behavior: smooth;
@@ -71,13 +74,40 @@ body {
   margin-top: 128px;
   margin-bottom: 128px;
 }
+.my-6 {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.mt-6 {
+  margin-top: 80px;
+}
+.mb-6 {
+  margin-bottom: 80px;
+}
 .py-6 {
   padding-top: 68px;
   padding-top: 68px;
 }
+.pt-6 {
+  padding-top: 80px;
+}
+.pb-6 {
+  padding-bottom: 80px;
+}
+.pt-sm-6 {
+  @media (min-width: 576px) {
+    padding-top: 80px !important;
+  }
+}
+.pb-sm-6 {
+  @media (min-width: 576px) {
+    padding-bottom: 80px !important;
+  }
+}
+
 // text sizes
-@mixin fontRoot($family, $weight, $size) {
-  font-family: $family;
+@mixin fontRoot($weight, $size, $fontFamily: $fontPrimary) {
+  font-family: $fontFamily;
   font-weight: $weight;
   font-size: $size;
   font-style: normal;
@@ -85,45 +115,63 @@ body {
   font-feature-settings: "kern" off;
   color: $primary-light;
   @media (max-width: 548px) {
-    font-size: calc($size / 1.2);
+    font-size: calc($size / 1.1);
   }
   @media (max-width: 358px) {
-    font-size: calc($size / 2);
+    font-size: calc($size / 1.6);
   }
 }
 
 .h1 {
-  @include fontRoot("Roboto", 700, 4rem);
+  @include fontRoot(700, 4rem);
+  line-height: 150%;
 }
 .h2 {
-  @include fontRoot("Roboto", 700, 3.5rem);
-  line-height: 1;
+  @include fontRoot(700, 3.5rem);
 }
 .h3 {
-  @include fontRoot("Roboto", 700, 2rem);
+  @include fontRoot(700, 2rem);
 }
 .h4 {
-  @include fontRoot("Roboto", 700, 1.8rem);
+  @include fontRoot(700, 1.7rem);
+}
+.h5 {
+  @include fontRoot(400, 1.5rem);
+}
+.h6 {
+  @include fontRoot(500, 1.25rem);
 }
 .subtitle1 {
-  @include fontRoot("Roboto", 200, 2rem);
-  line-height: 120%;
+  @include fontRoot(200, 2rem);
+  font-feature-settings: "liga" off;
 }
 .subtitle2 {
-  @include fontRoot("Roboto", 200, 1.7rem);
-  line-height: 120%;
+  @include fontRoot(200, 1.7rem);
 }
 .body1 {
-  @include fontRoot("Roboto", 300, 1.4rem);
-  line-height: 150%;
+  @include fontRoot(300, 1.4rem);
 }
 .body2 {
-  @include fontRoot("Roboto", 300, 1.2rem);
-  line-height: 150%;
+  @include fontRoot(200, 1.2rem);
 }
 .caption {
-  @include fontRoot("Roboto", 300, 1rem);
-  line-height: 100%;
+  @include fontRoot(300, 1rem);
+}
+.caption2 {
+  @include fontRoot(300, 0.875rem);
+}
+.small {
+  @include fontRoot(300, 0.75rem);
+}
+.lato {
+  font-family: $fontSecondary;
+  line-height: 120%;
+}
+.label-primary {
+  @include fontRoot(500, 0.75rem);
+}
+.label-secondary {
+  @include fontRoot(500, 0.75rem, $fontSecondary);
 }
 
 .gradient-text {
@@ -139,7 +187,7 @@ a:hover {
 }
 // buttons
 @mixin buttonRoot($bg, $disBG, $color, $discolor) {
-  @include fontRoot("Lato", 600, 16px);
+  @include fontRoot(500, 16px);
   font-feature-settings: "liga" off;
   text-align: center;
   text-transform: capitalize;
@@ -161,7 +209,7 @@ a:hover {
   }
 }
 @mixin LinkRoot {
-  @include fontRoot("Roboto", 700, 14px);
+  @include fontRoot(400, 14px);
   text-align: center;
   text-transform: capitalize;
   font-feature-settings: "liga" off;
@@ -508,10 +556,12 @@ tbody {
   background-size: cover;
 }
 .stats-bg {
-  background-image: url("/StatsSection/bg.png");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 25.58%
+    ),
+    linear-gradient(180deg, rgba(82, 0, 255, 0.25) 0%, rgba(36, 0, 255, 0) 100%);
 }
 .choosing-bg {
   background-image: url("/WhyChooseUsSection/bg.png");
