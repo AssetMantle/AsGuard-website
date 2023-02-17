@@ -11,6 +11,7 @@ export default function HowToStakeSection({ howToStakeSectionConfigData }) {
         howToStakeSectionConfigData.description &&
         howToStakeSectionConfigData.description
       }
+      subtitleWidth={640}
     >
       {Array.isArray(howToStakeSectionConfigData.steps) &&
         howToStakeSectionConfigData.steps &&
@@ -68,7 +69,7 @@ export default function HowToStakeSection({ howToStakeSectionConfigData }) {
                   )}
                   {step.link && (
                     <a
-                      className={`${step.linkColor} text-capitalize`}
+                      className={`${step.linkColor} text-capitalize h6`}
                       href={`${step.link}`}
                       style={{ textDecoration: "none" }}
                     >
