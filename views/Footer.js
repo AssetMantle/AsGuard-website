@@ -31,10 +31,15 @@ export default function Footer(props) {
               spacing={3}
               size="small"
             />
-            <div className="caption text-center d-flex align-items-center gap-2">
+            <a
+              href="https://assetmantle.one/"
+              className="caption text-center d-flex align-items-center gap-2 no-underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <p className="mb-0 text-white">Powered by </p>
               <img src="/static/Logo.svg" style={{ maxWidth: "140px" }}></img>
-            </div>
+            </a>
             {/* <div className="d-flex flex-column flex-sm-row justify-content-sm-between justify-content-lg-end align-items-center gap-4 w-100">
             </div> */}
           </div>
