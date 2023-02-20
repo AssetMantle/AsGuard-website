@@ -45,6 +45,8 @@ export async function getStaticProps() {
     floatingBoxImage2: "/hero/floatingBox2.png",
   };
   const statsSectionConfigData = {
+    description:
+      "The enterprise-grade blockchain infrastructure of Asgaurd enables you to grow your cryptocurrency holdings securely. Boost your earnings by taking advantage of decentralized proof-of-stake consensus networks.",
     optionStyles: {
       maxWidth: "290px",
       boxShadow: "none",
@@ -61,20 +63,18 @@ export async function getStaticProps() {
       marginTop: "32px",
       opacity: "0.4",
     },
-    description:
-      "The enterprise-grade blockchain infrastructure of Asgaurd enables you to grow your cryptocurrency holdings securely. Boost your earnings by taking advantage of decentralized proof-of-stake consensus networks.",
     descriptionStyle: {
       width: "min(842px, 100%)",
     },
     socialLinkPillStyles: {},
     stats: [
       {
-        title: "00m",
+        title: "1.38m",
         description1: "Total assets",
         description2: "stAKED",
       },
       {
-        title: "55k",
+        title: "290",
         description1: "Total unique",
         description2: "delegators",
       },
@@ -90,7 +90,7 @@ export async function getStaticProps() {
       },
     ],
     stateCardStyles: {
-      width: "min(180px, 100%)",
+      width: "min(220px, 100%)",
     },
     statsTitleStyles: {
       fontSize: "54px",
@@ -163,16 +163,6 @@ export async function getStaticProps() {
     ],
   };
   const howToStakeSectionConfigData = {
-    optionContainerStyles: { gap: "14px" },
-    optionContainerStyleClasses: `d-flex align-items-center justify-content-center flex-wrap mt-5`,
-    optionStyles: {
-      background: "transparent",
-      maxWidth: "280px",
-      boxShadow: "none",
-      padding: "16px 22px",
-      minHeight: "331px",
-      transition: "all 0.3s ease-in-out",
-    },
     titleVariant: "h3",
     titleColor: "text-primary",
     descriptionVariant: "body2",
@@ -194,7 +184,7 @@ export async function getStaticProps() {
         descriptionVariant: "body2",
         descriptionColor: "text-white",
         dimensions: { width: "150px", height: "150px" },
-        link: "https://assetmantle.one/",
+        link: "https://wallet.keplr.app/",
         linkTitle: "connect wallet >",
         linkColor: "text-primary",
       },
@@ -207,7 +197,7 @@ export async function getStaticProps() {
         descriptionVariant: "body2",
         descriptionColor: "text-white",
         dimensions: { width: "100%", height: "100%" },
-        link: "https://assetmantle.one/",
+        link: "https://wallet.assetmantle.one/trade",
         linkTitle: "Buy tokens >",
         linkColor: "text-primary",
       },
@@ -220,7 +210,7 @@ export async function getStaticProps() {
         descriptionVariant: "body2",
         descriptionColor: "text-white",
         dimensions: { width: "100%", height: "100%" },
-        link: "https://assetmantle.one/",
+        link: "https://wallet.assetmantle.one/stake",
         linkTitle: "stake tokens >",
         linkColor: "text-primary",
       },
@@ -233,11 +223,21 @@ export async function getStaticProps() {
         descriptionVariant: "body2",
         descriptionColor: "text-white",
         dimensions: { width: "100%", height: "100%" },
-        link: "https://assetmantle.one/",
+        link: "/#staking-ecosystems",
         linkTitle: "View APR >",
         linkColor: "text-primary",
       },
     ],
+    optionContainerStyles: { gap: "14px" },
+    optionContainerStyleClasses: `d-flex align-items-center justify-content-center flex-wrap mt-5`,
+    optionStyles: {
+      background: "transparent",
+      maxWidth: "280px",
+      boxShadow: "none",
+      padding: "16px 22px",
+      minHeight: "331px",
+      transition: "all 0.3s ease-in-out",
+    },
   };
   const stakingEcosystemsConfigData = {
     title: "Staking Ecosystems",
