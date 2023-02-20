@@ -40,7 +40,7 @@ export async function getStaticProps() {
       variant: "button-primary",
       href: "https://wallet.assetmantle.one/",
     },
-    image: "/hero/BG.png",
+    image: "/hero/bg.webp",
     floatingBoxImage1: "/hero/floatingBox1.png",
     floatingBoxImage2: "/hero/floatingBox2.png",
   };
