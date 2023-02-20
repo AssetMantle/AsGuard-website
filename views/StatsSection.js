@@ -14,11 +14,11 @@ export default function StatsSection({ statsSectionConfigData }) {
         </p>
         <div style={statsSectionConfigData.seperatorLineStyles}></div>
         <div
-          className="w-auto bg-translucent rounded-5 px-5 py-1 mb-5 mt-4"
+          className="w-auto bg-translucent rounded-5 px-5 py-2 mb-5 mt-4"
           style={statsSectionConfigData.socialLinkPillStyles}
         >
           <SocialIcons
-            additionalClass="justify-content-center justify-content-md-start body1"
+            additionalClass="justify-content-center justify-content-md-start body1 my-1"
             spacing={4}
             size="small"
           />
@@ -26,16 +26,16 @@ export default function StatsSection({ statsSectionConfigData }) {
         {Array.isArray(statsSectionConfigData.stats) &&
           statsSectionConfigData.stats &&
           statsSectionConfigData.stats.length > 0 && (
-            <div className="d-flex flex-wrap align-items-center justify-content-center gap-4 w-100">
+            <div className="d-flex flex-wrap align-items-center justify-content-between gap-4 w-100">
               {React.Children.toArray(
                 statsSectionConfigData.stats.map((stats) => (
                   <div
-                    className={`d-flex flex-column align-items-center bg-t h-100 p-2 rounded-4 mx-auto`}
-                    style={statsSectionConfigData.stateCardStyles}
+                    className={`d-flex flex-column align-items-center justify-content-start bg-t h-100 p-2 rounded-4 mx-auto`}
+                    // style={statsSectionConfigData.stateCardStyles}
                   >
                     {stats.title && (
                       <h1
-                        className="d-flex text-uppercase text-white text-start"
+                        className="d-flex text-uppercase text-white text-start w-100"
                         style={statsSectionConfigData.statsTitleStyles}
                       >
                         {stats.title}
