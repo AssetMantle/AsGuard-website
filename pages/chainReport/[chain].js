@@ -3,7 +3,7 @@ import Section from "../../components/Section";
 import { useRouter } from "next/router";
 
 const chainDetailConfigData = {
-  title: "Chain STake details",
+  title: "Chain Stake details",
   description: "Find comprehensive details pertaining to",
   seperatorLineStyles: {
     width: "1px",
