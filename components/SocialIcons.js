@@ -8,7 +8,7 @@ const SocialIcons = ({ spacing = 4, additionalClass = "" }) => (
   >
     <a
       className="text-white"
-      href="https://twitter.com/AssetMantle"
+      href="https://twitter.com/AsGuardNetwork"
       target="_blank"
       color="inherit"
     >
@@ -16,15 +16,15 @@ const SocialIcons = ({ spacing = 4, additionalClass = "" }) => (
     </a>
     <a
       className="text-white"
-      href="https://github.com/AssetMantle"
+      href="https://github.com/AsGuardNetwork"
       target="_blank"
       color="inherit"
     >
       <FiGithub />
     </a>
     <a
-      className="text-white"
-      href="https://t.me/assetmantlechat"
+      className="text-white body1"
+      href="mailto:"
       target="_blank"
       color="inherit"
     >
