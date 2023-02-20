@@ -17,7 +17,7 @@ export default function Header() {
         className="position-fixed container-fluid top-0 start-0"
         style={{
           zIndex: 1200,
-          backgroundColor: "rgba(4, 4, 4, 0.8)",
+          backgroundColor: "rgba(4, 4, 4, 0.4)",
           backdropFilter: "blur(1px)",
         }}
       >
