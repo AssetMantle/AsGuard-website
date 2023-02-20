@@ -10,7 +10,7 @@ export default function HeroSection({ heroSectionConfigData }) {
       }
     >
       <div
-        className="bg-image text-center d-flex flex-column justify-content-center align-items-center w-100 py-6 py-md-4 mt-2"
+        className="bg-image text-center d-flex flex-column justify-content-center align-items-center w-100 py-6 py-md-5"
         style={{
           backgroundImage: `linear-gradient(0deg, rgba(14, 14, 14, 0) 41.37%, #0E0E0E 48.46%, #0E0E0E 61.44%, rgba(14, 14, 14, 0) 70.43%), url(${heroSectionConfigData.image})`,
           backgroundSize: "cover",
