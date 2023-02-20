@@ -1,7 +1,6 @@
 import React from "react";
 import { FiGithub, FiTwitter } from "react-icons/fi";
-import { TbBrandTelegram, TbBrandDiscord } from "react-icons/tb";
-import { BsInstagram } from "react-icons/bs";
+import { BsEnvelope } from "react-icons/bs";
 
 const SocialIcons = ({ spacing = 4, additionalClass = "" }) => (
   <div
@@ -17,14 +16,6 @@ const SocialIcons = ({ spacing = 4, additionalClass = "" }) => (
     </a>
     <a
       className="text-white"
-      href="https://discord.gg/BSdBQ4495d"
-      target="_blank"
-      color="inherit"
-    >
-      <TbBrandDiscord />
-    </a>
-    <a
-      className="text-white"
       href="https://github.com/AssetMantle"
       target="_blank"
       color="inherit"
@@ -37,15 +28,7 @@ const SocialIcons = ({ spacing = 4, additionalClass = "" }) => (
       target="_blank"
       color="inherit"
     >
-      <TbBrandTelegram />
-    </a>
-    <a
-      className="text-white"
-      href="https://www.instagram.com/assetmantle/"
-      target="_blank"
-      color="inherit"
-    >
-      <BsInstagram />
+      <BsEnvelope />
     </a>
   </div>
 );
