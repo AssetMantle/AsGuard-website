@@ -38,7 +38,7 @@ export async function getStaticProps() {
       label: "Stake Now",
       endIcon: "bi-arrow-up-right",
       variant: "button-primary",
-      href: "https://wallet.assetmantle.one/",
+      href: "https://wallet.assetmantle.one/stake",
     },
     image: "/hero/bg.webp",
     floatingBoxImage1: "/hero/floatingBox1.png",
@@ -122,41 +122,41 @@ export async function getStaticProps() {
     featuresArray: [
       {
         image: "/WhyChooseUsSection/NeverFailingService.svg",
-        title: "Never-failing service",
-        titleColor: "text-primary",
-        titleVariant: "h4",
+        title: "High Availability",
         description:
           "To ensure uninterrupted service, our systems use highly available, distributed and redundant nodes across multiple data centres in various geographical regions.",
+        titleColor: "text-primary",
+        titleVariant: "h4",
         descriptionVariant: "body2",
         descriptionColor: "text-white",
       },
       {
         image: "/WhyChooseUsSection/StateOfTheArtInfrastructure.svg",
-        title: "State of the art infrastructure",
+        title: "Optimized Infrastructure",
+        description:
+          "Our auto-configured, professionally designed key management system ensures distributed control over cryptographic materials unlike manual deployment.",
         titleColor: "text-primary",
         titleVariant: "h4",
-        description:
-          "Our state-of-the-art infrastructure is automatically configured to avoid the risks associated with manual deployment. A professionally designed key management system ensures effective and distributed control over cryptographic materials.",
         descriptionVariant: "body2",
         descriptionColor: "text-white",
       },
       {
         image: "/WhyChooseUsSection/CuttingEdgeSecurity.svg",
-        title: "Cutting-edge security",
+        title: "Cutting-Edge Security",
+        description:
+          "We protect our validators from cyber and physical attacks through a robust, comprehensive security setup, with continuous monitoring by our global team.",
         titleColor: "text-primary",
         titleVariant: "h4",
-        description:
-          "We protect our validators from cyber and physical attacks through a robust, comprehensive security setup. Furthermore, we maintain a constant eye on operations with our global team and stay prepared to react immediately to any incidents, major or minor.",
         descriptionVariant: "body2",
         descriptionColor: "text-white",
       },
       {
         image: "/WhyChooseUsSection/LowCommissionHighRewards.svg",
-        title: "Low commission & High rewards",
+        title: "Highly Incentivised",
+        description:
+          "Our service provides competitive yield as staking rewards, with nominal commission rates, to provide multiplied economical benefit to our users over long term.",
         titleColor: "text-primary",
         titleVariant: "h4",
-        description:
-          "To ensure uninterrupted service, our systems use highly available, distributed and redundant nodes across multiple data centres in various geographical regions.",
         descriptionVariant: "body2",
         descriptionColor: "text-white",
       },
@@ -258,9 +258,9 @@ export async function getStaticProps() {
         icon: "/CollabsSection/mantleplace.svg",
         name: "MantleChain (Mainnet)",
         dimensions: { width: "134px", height: "30px" },
-        description: "APR:",
+        description: "APR: 113%",
         learnMoreButton: "/chainReport/assetmantle",
-        stakeNowButton: "https://wallet.assetmantle.one/",
+        stakeNowButton: "https://wallet.assetmantle.one/stake",
       },
       {
         icon: "/CollabsSection/axelar.png",
