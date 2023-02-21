@@ -56,7 +56,7 @@ export default function WhyChooseUsSection({ whyChooseUsSectionConfigData }) {
                         </h5>
                       )}
                       {feature.description && (
-                        <p className={`${feature.descriptionVariant}`}>
+                        <p className={`mb-0 ${feature.descriptionVariant}`}>
                           {feature.description}
                         </p>
                       )}
