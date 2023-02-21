@@ -24,7 +24,7 @@ const SocialIcons = ({ spacing = 4, additionalClass = "" }) => (
     </a>
     <a
       className="text-white body1"
-      href="mailto:communications@assetmantle.one"
+      href="mailto:hello@asguard.network"
       target="_blank"
       color="inherit"
     >
