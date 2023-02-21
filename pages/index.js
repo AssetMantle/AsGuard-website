@@ -267,8 +267,10 @@ export async function getStaticProps() {
         name: "Axelar (Testnet)",
         dimensions: { width: "113px", height: "27px" },
         description: "APR:",
-        learnMoreButton: "/chainReport/axelar",
-        stakeNowButton: "https://wallet.assetmantle.one/",
+        learnMoreButton: "",
+        // "/chainReport/axelar",
+        stakeNowButton: "",
+        // "https://wallet.assetmantle.one/",
       },
       {
         icon: "/CollabsSection/archway.svg",
