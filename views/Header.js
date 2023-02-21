@@ -6,7 +6,7 @@ const menuButtonList = [
     label: "Stake Now",
     endIcon: "bi-arrow-up-right",
     variant: "button-primary",
-    href: "https://wallet.assetmantle.one/",
+    href: "https://wallet.assetmantle.one/stake",
   },
 ];
 
