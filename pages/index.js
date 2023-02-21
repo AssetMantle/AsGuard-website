@@ -187,6 +187,7 @@ export async function getStaticProps() {
         link: "https://wallet.keplr.app/",
         linkTitle: "connect wallet >",
         linkColor: "text-primary",
+        target: "_blank",
       },
       {
         image: "/HowToStakeSection/Acquire.png",
@@ -200,6 +201,7 @@ export async function getStaticProps() {
         link: "https://wallet.assetmantle.one/trade",
         linkTitle: "Buy tokens >",
         linkColor: "text-primary",
+        target: "_blank",
       },
       {
         image: "/HowToStakeSection/Stake.png",
@@ -213,6 +215,7 @@ export async function getStaticProps() {
         link: "https://wallet.assetmantle.one/stake",
         linkTitle: "stake tokens >",
         linkColor: "text-primary",
+        target: "_blank",
       },
       {
         image: "/HowToStakeSection/Earn.png",
@@ -226,6 +229,7 @@ export async function getStaticProps() {
         link: "/#staking-ecosystems",
         linkTitle: "View APR >",
         linkColor: "text-primary",
+        target: "",
       },
     ],
     optionContainerStyles: { gap: "14px" },

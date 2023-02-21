@@ -72,6 +72,11 @@ export default function HowToStakeSection({ howToStakeSectionConfigData }) {
                       className={`${step.linkColor} text-capitalize h6`}
                       href={`${step.link}`}
                       style={{ textDecoration: "none" }}
+                      target={
+                        step.target && step.target === "_blank"
+                          ? step.target
+                          : "_self"
+                      }
                     >
                       {step.linkTitle}
                     </a>
