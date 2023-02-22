@@ -5,7 +5,10 @@ export default function Layout({ children }) {
   return (
     <>
       <Header />
-      <main className="mx-auto" style={{ width: "min(1440px,100%)" }}>
+      <main
+        className="mx-auto"
+        style={{ width: "min(1440px,100%)", background: "#111111" }}
+      >
         {children}
       </main>
       <Footer />
